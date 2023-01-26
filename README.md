@@ -1,6 +1,5 @@
 # WLANS-BOOK-store
-Aplicación web enfocada en el comercio electrónico de libros según la necesidad del usuario.Permite al usuario registrarse y adquirir un libro ya sea nuevo o usado.
-así como también da la opción para quien quiera registrarse y ofertar sus libro para la venta.
+Aplicación web enfocada en el comercio electrónico de libros según la necesidad del usuario. Permite al usuario registrarse y adquirir un libro ya sea nuevo o usado. Así como también da la opción para quien quiera registrarse y ofertar su libro para la venta.
 
 
 ## 📚 Pila de tecnología frontend
