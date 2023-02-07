@@ -43,3 +43,5 @@ Aplicación web enfocada en el comercio electrónico de libros según la necesid
 
 ### Licencia
 MIT
+### Documento Tarea 1
+https://drive.google.com/drive/u/0/folders/1-UrW_PN7gSjhO9SxJYtjqDBOmexRDWSv
