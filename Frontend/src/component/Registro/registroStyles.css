@@ -1,0 +1,45 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Oswald:wght@300&family=Poppins:wght@200;400&family=Quicksand:wght@600&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2f2;
+  min-height: 100vh;
+}
+.section-styles{
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px 200px;
+  padding: 200px ;
+}
+.title-styles h3{
+  color: #fafbfd;
+  font-family:'Oswald', sans-serif;
+  display: flex;
+  justify-content: center;
+}
+.form-styles{
+  background-color: blue;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.form-sections-styles{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 10px 20px;
+}
+.div-submit{
+  display: flex;
+  align-items: center;
+}
