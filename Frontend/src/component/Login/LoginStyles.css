@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400&display=swap');
-
-
 * {
   margin: 0;
   padding: 0;
@@ -22,7 +20,7 @@ label{
   width: 100%;
   padding: 12px 0px;
 }
-input, select {
+input {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -34,7 +32,7 @@ input, select {
 input[type=submit]{
   font-family: 'Nunito+Sans', sans-serif;
   font-size: 14px;
-  width: 100%;
+  width: 30%;
   background-color: #1b2437;
   color: #fafbfd;
   padding: 14px 20px;
@@ -44,7 +42,6 @@ input[type=submit]{
   cursor: pointer;
 }
 .section-styles{
-
   background-color: #fafbfd;
   display: flex;
   flex-direction: column;
@@ -58,18 +55,14 @@ input[type=submit]{
   font-size: 25px;
   padding: 5px 45px;
 }
-.form-styles{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
 .form-sections-styles{
   width: 100%;
-  display: grid;
-  grid-template-columns: 50% 50%;
   padding: 5px 20px;
 }
 .form-sections-styles div{
   padding: 10px 25px;
 }
-
+.div-submit{
+  display: flex;
+  justify-content: center;
+}
