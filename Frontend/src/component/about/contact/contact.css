@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Oswald&display=swap');
+ /*   font-family: 'Merriweather', serif;*/
+ /*  font-family: 'Oswald', sans-serif; */
+
+
+
+
+body {
+
+  background: rgb(27,36,55);
+  background: radial-gradient(circle, rgba(27,36,55,1) 0%, rgba(13,13,17,1) 91%);
+  overflow-x: hidden;
+}
+
+
+.container-banner {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border: none;
+  background-image:linear-gradient( rgba(27, 36, 55, 0.658), rgba(0, 0, 0, 0.556)),url(/src/assets/img/banner4.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 400px;
+  width: 100vw;
+}
+
+
+.container-banner2  {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border: none;
+  background-image:url(/src/assets/img/banner2.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 350px;
+  width: 100vw;
+}
+
+.content {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1% 25% 1% 25%;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+
+}
+
+h1{
+  display: flex;
+  justify-content: start;
+  font-size: 3em;
+  font-family: 'Oswald', sans-serif;
+  color: #fafbfd;
+  text-shadow: 2px 0px 8px rgba(0,0,0,0.84);
+  margin: 10px;
+  padding-bottom: 20px;
+
+
+}
+
+h3 {
+  text-align: center;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+
+h2 {
+  margin: 10px;
+  color: #fafbfd;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
+ 
+}
+.contact-wrapper {
+  box-shadow: 0 0 20px 0 rgb(255,255,255, .3);
+  display: flex;
+}
+
+.contact-wrapper > * {
+  padding: 1em;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style: none;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  padding: 0;
+
+
+}
+
+ul li {
+  margin-bottom: 20px;
+}
+
+.list img {
+  padding-right: 15px;
+  
+}
+
+.contact-info {
+  background-color: #0d0d1191;
+  width: 100%;
+  color: #fafbfd;
+  font-family: 'Merriweather', serif;
+  font-size: 1em;
+
+}
+
+
+
+
+.contact-form {
+  width: 100%;
+
+}
+
+.contact-form {
+  margin: 0;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+}
+
+
+
+.inputs,
+.contact-form form textarea {
+  width: 100%;
+  padding: .7em;
+  border: none;
+  background: none;
+  outline: none;
+  border-bottom: 1px solid #a1594d;
+  color: #fafbfd;
+  flex-wrap: wrap;
+
+}
+
+.button {
+  background-color: #a1594d;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 10%;
+  width: 50%;
+  margin-left: 25%;
+  border-radius: 8px;
+  border: none;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #50555d;
+  color: #fafbfd;
+
+}
+
+.modal_container{
+  background-color: rgba(0, 0,0, 0.4);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+.modal__conten{
+  width: 400px;
+  max-width: 500px;
+  height: 300px;
+  padding: 5px 50px 50px 50px;
+  position: relative;
+  border-radius: 5px;
+  color: #0d0d11;
+  font-family: 'Merriweather', serif;
+  letter-spacing: 1px;
+  box-sizing: border-box;
+  background-image: url(/src/assets/img/logo.png);
+  background-color: #50555d;
+  display: block;
+
+}
+
+
+.modal__conten h3 {
+  text-align: left;
+  padding-top: 0;
+  
+}
+  
+
+
+
+
+.modal__closed{
+  position: absolute;
+  top: 5px;
+  right: 3px;
+  background: none;
+  border: none;
+  outline: none;
+  color: #f2f2f2;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 640px) {
+  .contact-info {
+    color: #fafbfd;
+    font-family: 'Merriweather', serif;
+    font-size: .9em;
+  }
+  
+}
+
