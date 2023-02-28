@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,73 +10,86 @@
 </head>
 
 <body>
-  <section class="section-styles">
-    <div class="title-styles">
-      <h3>Crea Tu Cuenta</h3>
-    </div>
-    
-    <form class="form-styles">
-      <div class="form-sections-styles">
-        <div>
-          <label for="">Tu Nombre</label>
-          <br>
-          <input type="text" required placeholder="Tu nombre..." >
-        </div>
-        <div>
-          <label for="">Tu Correo Electrónico</label>
-          <br>
-          <input type="text" required placeholder="Tu correo...">
-        </div>
+  <article class="article-styles">
+    <section class="img-section-styles">
+      <img class="img-styles" src="../../assets/img/background_registro_2.jpg" alt="">
+    </section>
+
+    <section class="section-styles">
+      <div class="title-styles">
+        <h3>Crea Tu Cuenta</h3>
       </div>
 
-      <div class="form-sections-styles">
-        <div>
-          <label for="">Tu Documento de Identidad</label>
-          <br>
-          <input type="email" required placeholder="Tu documento...">
+      <form class="form-styles">
+        <div class="form-sections-styles">
+          <div>
+            <label for="">Tu Nombre</label>
+            <br>
+            <input type="text" required placeholder="Tu nombre...">
+          </div>
+          <div>
+            <label for="">Tu Correo Electrónico</label>
+            <br>
+            <input type="text" required placeholder="Tu correo...">
+          </div>
         </div>
+
+        <div class="form-sections-styles">
+          <div>
+            <label for="">Tu Documento de Identidad</label>
+            <br>
+            <input type="email" required placeholder="Tu documento...">
+          </div>
+          <div>
+            <label>Tu Numero Telefónico</label>
+            <br>
+            <input type="text" required placeholder="Tu numero...">
+          </div>
+        </div>
+
+        <div class="form-sections-styles">
+          <div>
+            <label for="">Tu Ciudad o Municipio</label>
+            <br>
+            <select>
+              <option>Tu Ubicacion</option>
+              <option value="Bogota D.C">Bogota D.C</option>
+            </select>
+          </div>
+          <div>
+            <label>Tu Dirección de Residencia</label>
+            <br>
+            <input type="text" required placeholder="Tu dirección...">
+          </div>
+        </div>
+
+        <div class="form-sections-styles">
+          <div>
+            <label for="">Tu Contraseña</label>
+            <br>
+            <input type="password" required placeholder="Tu contraseña...">
+          </div>
+          <div>
+            <label for="">Confirma la Contraseña</label>
+            <br>
+            <input type="password" required placeholder="Tu contraseña...">
+          </div>
+        </div>
+
+        <div class="div-submit">
+          <input type="submit" value="Registrarse">
+        </div>
+      </form>
+
+      <div>
         <div>
-          <label>Tu Numero Telefónico</label>
-          <br>
-          <input type="text" required placeholder="Tu numero...">
+          <p>¿Ya tienes una cuenta?</p>
+          <a href="../Login/LoginIndex.html">Iniciar Sesión</a>
         </div>
       </div>
-
-      <div class="form-sections-styles">
-        <div>
-          <label for="">Tu Ciudad o Municipio</label>
-          <br>
-          <select>
-            <option>Tu Ubicacion</option>
-            <option value="Bogota D.C">Bogota D.C</option>
-          </select>
-        </div>
-        <div>
-          <label>Tu Dirección de Residencia</label>
-          <br>
-          <input type="text" required placeholder="Tu dirección...">
-        </div>
-      </div>
-
-      <div class="form-sections-styles">
-        <div>
-          <label for="">Tu Contraseña</label>
-          <br>
-          <input type="password" required placeholder="Tu contraseña...">
-        </div>
-        <div>
-          <label for="">Confirma la Contraseña</label>
-          <br>
-          <input type="password" required placeholder="Tu contraseña...">
-        </div>
-      </div>
-
-      <div class="div-submit">
-        <input type="submit" value="Registrarse">
-      </div>
-
-    </form>
-  </section>
-  
+      
+    </section>
+  </article>
 </body>
+
 </html>
