@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./contact.css">
+  <title>Contáctenos</title>
+</head>
+
+<body>
+
+  <!-- Header NAV -->
+  <header>
+    <a class="logo" href="../../../index.html"><img src="../../assets/img/LogoWLANS.png" alt="Logo WLANS Books Store"></a>
+    <nav>
+        <ul class="nav__links">
+            <li><a href="../../../index.html">Inicio</a></li>
+            <li><a href="../about/about.html">Acerca de</a></li>
+            <li><a href=".contact.html">Contáctenos</a></li>
+            <li><a href="#">productos</a></li>
+            <li><a href="#">Crear cuenta</a></li>
+            <li><a href="#"> <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                    </svg> </a></li>
+        </ul>
+    </nav>
+    <a class="cta" href="#">Iniciar sesión</a>
+    <p class="menu cta">Menu</p>
+</header>
+<div class="overlay">
+    <a class="close">&times;</a>
+    <div class="overlay__content">
+        <a href="../../../index.html">Inicio</a>
+        <a href="../about/about.html">Acerca de</a>
+        <a href=".html">Contáctenos</a>
+        <a href="#">productos</a>
+        <a href="#">Crear cuenta</a>
+        <a href="#">Iniciar Sesión</a>
+        <a href="#"> <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                viewBox="0 0 16 16">
+                <path
+                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+            </svg> </a>
+    </div>
+</div>
+
+    <section class="container-banner">
+    </section>
+
+    <div class="content">
+      <h1>Contáctenos</h1>
+      <div class="contact-wrapper">
+        <div class="contact-form">
+          <form id="contactenos" action="https://formspree.io/f/xbjeylkq" method="POST">
+            <input class="inputs" name="nombre" required type="text" placeholder="Nombre completo">
+            <input class="inputs" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required type="email" placeholder="Correo electrónico">
+            <input class="inputs" name="numero" pattern="[0-9]{10}" required type="number" placeholder="Número de contacto">
+            <textarea class="block" name="textarea" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+            <input class="button" type="submit" value="Enviar">
+          </form>
+        </div>
+        
+      </div>
+      <div class="contact-info">
+        <h3>Más información</h3>
+
+         <ul class="list">
+          <li> <img src="/src/assets/img/ubicacion.png" alt="ubicacion">Bogotá - Colombia</li>
+          <li> <img src="/src/assets/img/correo.png" alt="correo">wlansbokks@gmail.com</li>
+          <li> <img src="/src/assets/img/telefono.png" alt="telefono">333 222 22 22</li>
+          </ul> 
+
+
+      </div>
+    </div>
+
+    <div class="container-banner2">
+      <h2>
+        Espacio publicitario
+      </h2>
+    </div>
+
+   <div id="alert">
+
+   </div>
+  
+  <script src="contact.js"></script>
+ 
+  
+</body>
+</html>

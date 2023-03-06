@@ -1,77 +1,212 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Oswald&display=swap');
- /*   font-family: 'Merriweather', serif;*/
+/*   font-family: 'Merriweather', serif;*/
+
+:root {
+  --whiteColor: #FAFBFC;
+  --darckBlue: #1B2437;
+  --blackColor: #0D0D11;
+  --focusColor: #A1594C;
+
+  --textfont: 'Merriweather', sans-serif;
+  --tittlefont: 'Oswald', sans-serif;
+}
 
 body {
 
-  background: rgb(27,36,55);
-  background: radial-gradient(circle, rgba(27,36,55,1) 0%, rgba(13,13,17,1) 91%);
+  background: rgb(27, 36, 55);
+  background: radial-gradient(circle, rgba(27, 36, 55, 1) 0%, rgba(13, 13, 17, 1) 91%);
   overflow-x: hidden;
   z-index: 1;
+}
 
+/* header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 96vw;
+  padding: 3em 2em;
+  min-width: 360px;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.logo>img {
+  width: 200px;
+}
+
+.nav__links a,
+.cta,
+.overlay__content a {
+  font-family: var(--tittlefont);
+  font-size: 1.2em;
+  color: var(--whiteColor);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+}
+
+.nav__links li {
+  margin: 0 20px;
+}
+
+.nav__links li a {
+  transition: all .2s ease 0s;
+}
+
+.nav__links li a:hover {
+  color: var(--focusColor);
+}
+
+.cta {
+  padding: 15px 30px;
+  background-color: var(--focusColor);
+  color: var(--whiteColor);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  -webkit-box-shadow: 0 2px 10px 2px rgba(13, 13, 17, 0.65);
+  -moz-box-shadow: 0 2px 10px 2px rgba(13, 13, 17, 0.65);
+  box-shadow: 0 2px 10px 2px rgba(13, 13, 17, 0.65);
+}
+
+.cta:hover {
+  background-color: #314788;
+}
+
+.menu {
+  display: none;
+}
+
+.overlay {
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background: radial-gradient(circle, rgba(27, 36, 55, 1) 0%, rgba(13, 13, 17, 1) 91%);
+  overflow-x: hidden;
+  transition: width 0.5s ease 0s;
+}
+
+.overlay--active {
+  width: 100%;
+}
+
+.overlay__content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay a {
+  padding: 15px;
+  font-size: 2em;
+  display: block;
+  transition: color 0.3s ease 0s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: var(--focusColor);
+}
+
+.overlay .close {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  color: var(--whiteColor);
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+
+  .nav__links,
+  .cta {
+    display: none;
+  }
+
+  .menu {
+    display: initial;
+  }
+
+  .overlay a {
+    font-size: 1.8em;
+  }
 }
 
 
-
 span {
-    font-size: 60px;
-  }
+  font-size: 60px;
+}
 
 
-#img1{
-    
-    top: 0;
-    left: 0;
-    width: 100%;
-    -webkit-mask-image: radial-gradient(ellipse at center, #1b2437 30%, transparent 100%);
-    mask-image: radial-gradient(ellipse at center, #1b2437 30%, transparent 100%); 
-  }
+#img1 {
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-mask-image: radial-gradient(ellipse at center, #1b2437 30%, transparent 100%);
+  mask-image: radial-gradient(ellipse at center, #1b2437 30%, transparent 100%);
+}
 
 #img2 {
-    height: 80%;
-    width: 60%;
-    align-content: center;
-  }
-  
- #img2:hover {
+  height: 80%;
+  width: 60%;
+  align-content: center;
+}
+
+#img2:hover {
   height: 85%;
-    width: 65%; 
-  }
-  
+  width: 65%;
+}
 
-  h3 {
-    text-align: end;
-    margin: 10px;
-    font-family: 'Oswald', sans-serif;
-    text-shadow: 2px 0px 8px rgba(0,0,0,0.84);
-    font-size: 60px;
-    color: #fafbfd;
-  }
-  
-  h2 {
-    margin: 10px;
-    font-family: 'Oswald', sans-serif;
-    text-shadow: 2px 0px 8px rgba(0,0,0,0.84);
-    font-size: 40px;
-    color: #fafbfd;
-  }
-  
-  .abajo {
-    position: absolute;
-    top: 85%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80px;
-    height: 80px;
-    background-color: transparent;
-    border: none;
-  }
 
-  .abajo:hover{
-    width: 80px;
-    height: 80px;
-    border: solid 2px rgba(255, 255, 255, 0.841);
-    border-radius: 50%;
-  }
+h3 {
+  text-align: end;
+  margin: 10px;
+  font-family: 'Oswald', sans-serif;
+  text-shadow: 2px 0px 8px rgba(0, 0, 0, 0.84);
+  font-size: 60px;
+  color: #fafbfd;
+}
+
+h2 {
+  margin: 10px;
+  font-family: 'Oswald', sans-serif;
+  text-shadow: 2px 0px 8px rgba(0, 0, 0, 0.84);
+  font-size: 40px;
+  color: #fafbfd;
+}
+
+.abajo {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background-color: transparent;
+  border: none;
+}
+
+.abajo:hover {
+  width: 80px;
+  height: 80px;
+  border: solid 2px rgba(255, 255, 255, 0.841);
+  border-radius: 50%;
+}
 
 .container-banner {
   display: flex;
@@ -81,12 +216,12 @@ span {
   flex-wrap: wrap;
   align-items: center;
   border: none;
-  background-image:linear-gradient( rgba(27, 36, 55, 0.658), rgba(0, 0, 0, 0.556)),url(../../assets/img/banner4.jpg);
+  background-image: linear-gradient(rgba(27, 36, 55, 0.658), rgba(0, 0, 0, 0.556)), url(../../assets/img/banner4.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
   height: 600px;
-  
+
 }
 
 .item-banner {
@@ -94,10 +229,10 @@ span {
   height: 200px;
   margin: 10px;
   font-family: 'Oswald', sans-serif;
-  text-shadow: 2px 0px 8px rgba(0,0,0,0.84);
+  text-shadow: 2px 0px 8px rgba(0, 0, 0, 0.84);
   font-size: 90px;
   color: #fafbfd;
-  text-align: center; 
+  text-align: center;
 
 }
 
@@ -112,18 +247,18 @@ span {
   height: 30%;
   padding: 5% 25% 2% 25%;
   margin: 10px 10px 10px 10px;
-  
-  
+
+
 }
 
 .item-section1 {
   flex: 1;
   margin: 10px;
-  font-family:'Merriweather', serif;
+  font-family: 'Merriweather', serif;
   font-size: 18px;
   color: #fafbfd;
   text-align: justify;
-  
+
 
 }
 
@@ -136,45 +271,45 @@ span {
   width: 100%;
   height: 30%;
   margin-bottom: 5%;
-  
-  
-  
+
+
+
 }
 
 .item-txt1 {
   flex: 1;
   margin: 10px;
   align-self: center;
-  font-family:'Merriweather', serif;
+  font-family: 'Merriweather', serif;
   font-size: 18px;
   color: #fafbfd;
   text-align: justify;
   border: none;
   padding: 2% 2% 2% 1%;
-  
+
 }
 
 .item-img1 {
-  
+
   margin: 10px;
   align-self: center;
-  font-family:'Merriweather', serif;
+  font-family: 'Merriweather', serif;
   font-size: 18px;
   color: #fafbfd;
   text-align: center;
   width: 40%;
   padding: 1% 2% 2% 2%;
-  
-  
 
-  
+
+
+
 
 
 }
 
 
 .container-txt2 {
-  
+
   width: 100%;
   height: 300px;
   display: flex;
@@ -184,15 +319,15 @@ span {
   justify-content: space-between;
   align-items: center;
   border: none;
-  
-  
+
+
 }
 
 
 .item-txt2 {
   position: relative;
   flex-wrap: wrap;
-  font-family:'Merriweather', serif;
+  font-family: 'Merriweather', serif;
   font-size: 18px;
   color: #fafbfd;
   align-items: center;
@@ -201,16 +336,16 @@ span {
   border: none;
   width: 30%;
   height: 100%;
-  
+
 }
 
 
- 
+
 .item-img2 {
-  
+
   margin: 10px;
   align-self: center;
-  font-family:'Merriweather', serif;
+  font-family: 'Merriweather', serif;
   font-size: 18px;
   color: #fafbfd;
   text-align: center;
@@ -225,35 +360,36 @@ span {
 .item-txt3 {
   flex: 1;
   margin: 10px 80px 10px 10px;
-  font-family:'Merriweather', serif;
+  font-family: 'Merriweather', serif;
   font-size: 18px;
   color: #fafbfd;
   text-align: justify;
   border: none;
   flex-basis: 100px;
   width: 20%;
-  
-  
+
+
 }
 
 
 /* TARJETAS PRESENTACION */
 
-hr{
+hr {
   border-style: dashed;
   border-width: 2px;
   border-color: #fafbfd32
 }
-.team{
+
+.team {
   width: 100%;
-  height: 100%; 
+  height: 100%;
 }
 
-.title{
+.title {
   margin: 10px;
   padding: 6% 2% 1% 2%;
   font-family: 'Oswald', sans-serif;
-  text-shadow: 2px 0px 8px rgba(0,0,0,0.84);
+  text-shadow: 2px 0px 8px rgba(0, 0, 0, 0.84);
   font-size: 55px;
   color: #fafbfd;
   text-align: center;
@@ -262,11 +398,11 @@ hr{
 .container-card h2 {
   font-size: 20px;
   letter-spacing: 1px;
-  
+
 }
 
 
-.container-card{
+.container-card {
   height: 60%;
   width: 100%;
   display: flex;
@@ -278,17 +414,17 @@ hr{
 
 }
 
-.card{  
+.card {
   display: inline-block;
   position: relative;
   width: 200px;
   height: 350px;
   border-radius: 14px;
-  margin-top: 20px; 
+  margin-top: 20px;
   padding: 20px;
   margin-bottom: 5px;
   cursor: pointer;
-  
+
 
 }
 
@@ -305,24 +441,24 @@ hr{
   display: flex;
   align-content: center;
   margin-top: 0;
-  
-  
+
+
 }
 
 
-.roll{
+.roll {
   font-size: 12px;
   padding-bottom: 10px;
   margin: 0;
-  font-family:'Merriweather', serif;
+  font-family: 'Merriweather', serif;
   letter-spacing: 2px;
   color: #50555d;
   text-align: center;
-  
+
 }
 
-.roll:hover{
-  
+.roll:hover {
+
   color: #fafbfd;
 }
 
@@ -335,7 +471,7 @@ hr{
   margin-top: 0;
   font-size: 20px;
   letter-spacing: 2px;
- 
+
 }
 
 
@@ -348,7 +484,7 @@ hr{
   margin: 2px;
   font-size: 12px;
   color: #fafbfd;
-  font-family:'Merriweather', serif;
+  font-family: 'Merriweather', serif;
   background-color: #50555d74;
   border-radius: 7%;
 }
@@ -360,7 +496,7 @@ hr{
   margin: 2px;
   font-size: 12px;
   color: #fafbfd;
-  font-family:'Merriweather', serif;
+  font-family: 'Merriweather', serif;
   background-color: #50555d74;
   border-radius: 7%;
 }
@@ -371,7 +507,7 @@ hr{
   margin: 2px;
   font-size: 12px;
   color: #fafbfd;
-  font-family:'Merriweather', serif;
+  font-family: 'Merriweather', serif;
   background-color: #50555d74;
   border-radius: 7%;
 }
@@ -383,7 +519,7 @@ hr{
   margin: 2px;
   font-size: 12px;
   color: #fafbfd;
-  font-family:'Merriweather', serif;
+  font-family: 'Merriweather', serif;
   background-color: #50555d74;
   border-radius: 7%;
 }
@@ -394,39 +530,9 @@ hr{
   margin: 2px;
   font-size: 12px;
   color: #fafbfd;
-  font-family:'Merriweather', serif;
+  font-family: 'Merriweather', serif;
   background-color: #50555d74;
   border-radius: 7%;
 }
 
 /* RESPONSIVE */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

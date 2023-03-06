@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="E-commerce especializada en venta de libros usados y artículos de lectura.">
+    <meta name="keywords"
+        content="libros usados, venta de libros, artículos de lectura, tienda de libros, libros online">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="http://127.0.0.1:5500/index.html">
+    <meta name="author" content="Leopoldo Caraballo">
+    <meta name="og:title" content="WLANS Books Store, Mi tienda de libros usados">
+    <meta name="og:description"
+        content="En nuestra tienda de libros usados encontrarás una gran variedad de títulos a precios accesibles.">
+    <!-- favicon -->
+    <meta name="og:image" content="#">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+
+    <!-- Style links -->
+    <link rel="stylesheet" href="./style.css">
+    <title>WLANS Books Store</title>
+</head>
+
+<body>
+
+    <!-- Header NAV -->
+    <header>
+        <a class="logo" href="./index.html"><img src="./src/assets/img/LogoWLANS.png" alt="Logo WLANS Books Store"></a>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./src/components/about/about.html">Acerca de</a></li>
+                <li><a href="./src/components/contact/contact.html">Contáctenos</a></li>
+                <li><a href="#">productos</a></li>
+                <li><a href="#">Crear cuenta</a></li>
+                <li><a href="#"> <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                        </svg> </a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="#">Iniciar sesión</a>
+        <p class="menu cta">Menu</p>
+    </header>
+    <div class="overlay">
+        <a class="close">&times;</a>
+        <div class="overlay__content">
+            <a href="./index.html">Inicio</a>
+            <a href="./src/components/about/about.html">Acerca de</a>
+            <a href="./src/components/contact/contact.html">Contáctenos</a>
+            <a href="#">productos</a>
+            <a href="#">Crear cuenta</a>
+            <a href="#">Iniciar Sesión</a>
+            <a href="#"> <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                </svg> </a>
+        </div>
+    </div>
+
+
+    <!-- main SLIDER -->
+    <main>
+        <div class="main__slider">
+            <!-- Contenedor de las imágenes del slider -->
+            <div class="main__slider__slides">
+                <img src="./src/assets/img/slider-1.jpg" loading="lazy" alt="Imagen 1 del slider">
+                <img src="./src/assets/img/slider-2.jpg" loading="lazy" alt="Imagen 2 del slider">
+                <img src="./src/assets/img/slider-3.jpg" loading="lazy" alt="Imagen 3 del slider">
+            </div>
+            <!-- Indicadores de las imágenes del slider -->
+            <div class="main__slider__indicator">
+                <span class="main__slider__indicator__point active"></span>
+                <span class="main__slider__indicator__point"></span>
+                <span class="main__slider__indicator__point"></span>
+            </div>
+            <!-- Botones de "anterior" y "siguiente" del slider -->
+            <div class="main__slider__btn">
+                <span class="main__slider__indicator__prev">&lt;</span>
+                <span class="main__slider__indicator__next">&gt;</span>
+            </div>
+            <!-- Título del slider -->
+            <h1 class="main__slider__title">WLANS Books Store</h1>
+        </div>
+    </main>
+
+
+
+    <!-- Info CONTAINER -->
+    <!-- información sobre una tienda de libros -->
+    <section class="info__container">
+        <h3>La tienda de libros Online con la mayor colección de libros en Colombia</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, animi excepturi. Dolorum omnis
+            eveniet modi? Non eos aliquam, incidunt at fugiat molestiae nulla recusandae cum distinctio quasi sint
+            minima facilis.</p>
+    </section>
+
+
+
+    <!-- News CONTAINER -->
+    <!-- sección news de libros -->
+    <section class="news__container">
+        <h2>Novedades</h2>
+        <article class="news__container__article">
+            <div class="news__container__article--book">
+                <div class="article--book__books">
+                    <!-- Informacion del libro 1 -->
+                    <img src="./src/assets/img/libro-1.jpg" loading="lazy" alt="Libro 1, LOS HOMBRES DEL NORTE">
+                </div>
+            </div>
+        </article>
+        <article class="news__container__article">
+            <div class="news__container__article--book">
+                <div class="article--book__books">
+                    <!-- Informacion del libro 2 -->
+                    <img src="./src/assets/img/libro-2.jpg" loading="lazy" alt="Libro 2, MILAN KUNDERA">
+                </div>
+            </div>
+
+        </article>
+        <article class="news__container__article">
+            <div class="news__container__article--book">
+                <div class="article--book__books">
+                    <!-- Informacion del libro 3 -->
+                    <img src="./src/assets/img/libro-3.jpg" loading="lazy" alt="Libro 3, MOBY DICK">
+                </div>
+            </div>
+
+        </article>
+        <article class="news__container__article">
+            <div class="news__container__article--book">
+                <div class="article--book__books">
+                    <!-- Informacion del libro 4 -->
+                    <img src="./src/assets/img/libro-4.jpg" loading="lazy" alt="Libro 4, A TEASPOON OF EARTH AND SEA">
+                </div>
+            </div>
+
+        </article>
+    </section>
+
+
+
+    <!-- highlights CONTAINER -->
+    <!-- sección destacados de libros -->
+    <section class="highlights__container">
+        <h2>Destacados</h2>
+        <article class="highlights__container__article">
+            <div class="highlights__container__article--book">
+                <div class="highlights--book__books">
+                    <!-- Informacion del libro 1 -->
+                    <img src="./src/assets/img/libro-5.jpg" loading="lazy" alt="Libro 1, HARRY POTTER Y EL LEGADO MALDITO">
+                </div>
+            </div>
+        </article>
+        <article class="highlights__container__article">
+            <div class="highlights__container__article--book">
+                <div class="highlights--book__books">
+                    <!-- Informacion del libro 2 -->
+                    <img src="./src/assets/img/libro-6.jpg" loading="lazy" alt="Libro 2, LA NARANJA MECANICA">
+                </div>
+            </div>
+        </article>
+    </section>
+
+
+
+    <!-- Map -->
+    <section class="map__container">
+        <h2>Ubicación</h2>
+        <article class="map__container__article">
+            <!-- Inserción del mapa -->
+            <iframe class="article__map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4463.214939364408!2d-74.11611672742657!3d4.7227180079835955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f84a36dfde1f1%3A0x79e1b6f518dfe580!2sCC%20Unicentro%20de%20Occidente!5e0!3m2!1sen!2sco!4v1677691915986!5m2!1sen!2sco"
+                style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </article>
+    </section>
+
+
+    <!-- Suscríbete -->
+    <section class="suscribe__container">
+        <h2>Suscríbase a nuestro boletín electrónico</h2>
+        <article class="suscribe__container__article">
+            <!-- Inserción del formulario de suscripción -->
+            <form id="subscribe-form">
+                <input type="email" id="email-input" name="email" placeholder="Ingrese su correo electrónico" required>
+                <button type="submit">Suscribirse</button>
+            </form>
+
+        </article>
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
