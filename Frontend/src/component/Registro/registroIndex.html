@@ -13,6 +13,7 @@
   <article class="article-styles">
     <section class="img-section-styles">
       <img class="img-styles" src="../../assets/img/background_registro_2.jpg" alt="">
+      
     </section>
 
     <section class="section-styles">
@@ -28,39 +29,65 @@
             <input type="text" required placeholder="Tu nombre...">
           </div>
           <div>
-            <label>Tu Correo Electrónico</label>
+            <label>Tu Apellido</label>
             <br>
-            <input type="text" required placeholder="Tu correo...">
+            <input type="text" required placeholder="Tu apellido...">
           </div>
         </div>
 
+
         <div class="form-sections-styles">
           <div>
-            <label>Tu Documento de Identidad</label>
+            <label>Tu Correo Electrónico</label>
             <br>
-            <input type="email" required placeholder="Tu documento...">
+            <input type="email" required placeholder="Tu correo...">
           </div>
           <div>
             <label>Tu Numero Telefónico</label>
             <br>
-            <input type="text" required placeholder="Tu numero...">
+            <input type="tel" required placeholder="Tu numero...">
           </div>
         </div>
 
         <div class="form-sections-styles">
           <div>
-            <label>Tu Ciudad o Municipio</label>
+            <label>Tipo de Documento</label>
             <br>
             <select>
-              <option>Tu Ubicacion</option>
-              <option value="Bogota D.C">Bogota D.C</option>
+              <option>Seleccione el Documento</option>
+              <option value="Cedula de Ciudadania">Cedula de Ciudadania</option>
+              <option value="Cedula de Extranjeria">Cedula de Extranjeria</option>
+              <option value="Pasaporte">Pasaporte</option>
             </select>
           </div>
           <div>
-            <label>Tu Dirección de Residencia</label>
-            <br>
-            <input type="text" required placeholder="Tu dirección...">
+              <label>Tu Numero de Identidad</label>
+              <br>
+              <input type="text" required placeholder="Tu documento...">
           </div>
+        </div>
+
+        <div class="form-sections-styles">
+          <div>
+            <label>Tu Departamento</label>
+            <br>
+            <select id="departamento">
+              <option>Tu Departamento</option>
+            </select>
+          </div>
+          <div>
+            <label>Tu Ciudad o Municipio</label>
+            <br>
+            <select id="ciudad">
+              <option>Tu Ciudad o Municipio</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="direction-styles">
+          <label>Tu Dirección de Residencia</label>
+          <br>
+          <input type="text" required placeholder="Tu dirección...">
         </div>
 
         <div class="form-sections-styles">
@@ -101,6 +128,8 @@
       
     </section>
   </article>
+
+  <script src="registroApp.js"></script>
 </body>
 
 </html>
