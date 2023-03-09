@@ -20,14 +20,14 @@ xhttp.onreadystatechange = function () {
       departamento.appendChild(optionDepartamento);
     }
 
-    departamento.addEventListener("change", () => {
+    departamento.addEventListener("change", () => {//Cada vez que la opcion cambia de departamento  entrara a esta funcion 
       /*Cuando seleccione un departamento, mostrara los municipios del departamento seleccionado*/
       index = departamento.selectedIndex;
       console.log(index);
 
       if (index > 0) {
         /*removemos los municipios del departamento anteriormente seleccionado*/
-        document.getElementById("ciudad").innerHTML= "";
+        document.getElementById("ciudad").innerHTML = "";
         let optionCiudad = document.createElement('option');
         optionCiudad.text = "Tu Ciudad o Municipio";
         ciudad.appendChild(optionCiudad);
