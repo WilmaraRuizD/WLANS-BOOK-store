@@ -105,12 +105,6 @@ let capturaLibros = document.getElementById("formCrear");
 
 capturaLibros.addEventListener("submit", function (e) {
 
- const errores=[];
- 
- document.g
-
-
-
   const enviarJson = {};
 
      enviarJson.nombre = document.getElementById("nombre").value;

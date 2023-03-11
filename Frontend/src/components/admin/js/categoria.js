@@ -76,12 +76,13 @@ url1='http://127.0.0.1:3022/api/categoria/';
       
       
     }
+    /* funcion para borrar libros  */
 
     function borrar(id){
       console.log(id);
-      console.log(url+19);
+      console.log(url+id);
       
-      fetch(url +19, {
+      fetch(url +id, {
         method: "DELETE",
       })
       .then((res) => res.json())

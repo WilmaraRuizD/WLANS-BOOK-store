@@ -151,3 +151,130 @@ textarea{
   margin-left: 240px;
   padding: 10px;
 }
+
+@media (max-width: 925px) {
+
+  html{
+    overflow-x: hidden;
+  }
+  body{
+    overflow-x: hidden;
+  }
+
+header{
+    margin-bottom: 5px;
+    display: flex;
+  }
+
+header img{
+  max-width: 60%;
+  max-height: 80%;
+}
+
+.div1{
+  margin-right: 30px;
+}
+.div2{
+padding-left: 30px;
+margin-right: 30px;
+padding-top:20px ;
+width: 60%;
+}
+.div2 input{
+  max-width: 300px;
+  border-radius: 10px ;
+
+}
+
+.div2 button{
+  width: 80px;
+  height: 40px;
+}
+
+.div3{
+
+  max-width: 15%;
+  padding-top:50px ;
+  padding-left: 10px;
+ margin-left: 50px;
+}
+h5{
+  font-size: 20px;
+  padding: 5px;
+}
+
+
+textarea{
+  max-width:300px;
+  margin-left: 5px;
+  height: 100px;
+  padding: 20px;
+}
+
+.formCrear button ,.formCrear p{
+  margin-left: 40px;
+  margin-top: 2px;
+
+}
+
+
+}
+
+@media (max-width: 580px) {
+
+  
+.div1{
+
+  max-width: 25%;
+}
+.div2{
+margin-right: 10px;
+padding-top:30px ;
+max-width: 50%;
+}
+.div2 input{
+  max-width: 70%;
+  border-radius: 10px ;
+
+}
+
+.div2 button{
+  width: 60px;
+  height: 40px;
+}
+
+.div3{
+
+  max-width: 20%;
+  padding-top:50px ;
+  padding-left: 5px;
+ margin-left: 5px;
+}
+h5{
+  font-size: 20px;
+  padding: 5px;
+}
+
+.formCrear{
+ border-radius: 10px;
+ margin: auto;
+ width: 70%;
+ }
+
+textarea{
+  max-width:280px;
+  margin-left: 5px;
+  height: 100px;
+  padding: 20px;
+}
+¨
+.formCrear button ,.formCrear p{
+  margin-left: 40px;
+  margin-top: 2px;
+
+}
+
+
+
+
+}
