@@ -1,18 +1,3 @@
-//menu nav
-const doc = document;
-const menuOpen = doc.querySelector(".menu");
-const menuClose = doc.querySelector(".close");
-const overlay = doc.querySelector(".overlay");
-
-menuOpen.addEventListener("click", () => {
-  overlay.classList.add("overlay--active");
-});
-
-menuClose.addEventListener("click", () => {
-  overlay.classList.remove("overlay--active");
-});
-
-
 
 // slider
 const slides = document.querySelector(".main__slider__slides");
@@ -31,6 +16,7 @@ function prevSlide() {
   slides.style.transform = `translateX(-${index * 33.3333}%)`;
   updateIndicator();
 }
+
 
 function nextSlide() {
   index++;
@@ -90,3 +76,55 @@ function validateEmail(email) {
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return regex.test(email);
 }
+
+/* Axas para navbar */
+
+        
+$main=document.querySelector("header");
+
+const getHTML=(options)=>{
+  let {url,success,error }=options;
+  const xhr=new XMLHttpRequest();
+  xhr.addEventListener("readystatechange",e=>{
+    if(xhr.readyState !==4)return;
+    if(xhr.status>=200 && xhr.status<300){
+      let html=xhr.responseText;
+      success(html);
+    }else{
+     let message=xhr.statusText||"Ocurrio un error";
+     
+     error(`Error ${xhr.status}:${message}`)
+    }
+  });
+  xhr.open("GET",url);
+  xhr.setRequestHeader("Content-type","text/html;charset=utf-8");
+  xhr.send();
+}
+
+document.addEventListener("DOMContentLoaded",e=>{
+  getHTML({
+    url:"./src/components/nav/navbar.html",
+    success:(html) => $main.innerHTML=html,
+    error:(err)=>$main.innerHTML=`<h1>${err}</h1>`
+
+
+  });
+
+
+})
+
+
+
+//menu nav
+const doc = document;
+const menuOpen = doc.querySelector(".menu");
+const menuClose = doc.querySelector(".close");
+const overlay = doc.querySelector(".overlay");
+
+menuOpen.addEventListener("click", () => {
+  overlay.classList.add("overlay--active");
+});
+
+menuClose.addEventListener("click", () => {
+  overlay.classList.remove("overlay--active");
+});
