@@ -123,8 +123,8 @@ capturaLibros.addEventListener("submit", function (e) {
      console.log(enviarJson); 
 
   e.preventDefault();
-alert("soy prueba 2")
-  /* fetch(url, {
+
+  fetch(url, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -134,5 +134,5 @@ alert("soy prueba 2")
   .then((res) => res.json())
   .then((data) => {
     console.log(data);
-  }); */
+  }); 
 })

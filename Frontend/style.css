@@ -37,6 +37,9 @@ header {
 .logo {
     cursor: pointer;
 }
+.logo>img{
+    width: 200px;
+}
 
 .nav__links a,
 .cta,
@@ -244,6 +247,7 @@ header {
         font-size: 80px;
     }
 }
+
 @media (max-width: 600px) {
     .main__slider__title {
         font-size: 50px;
