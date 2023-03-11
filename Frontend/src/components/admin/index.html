@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+    <title>Frontendfunn - Bootstrap 5 Admin Dashboard Template</title>
+  </head>
+
+  <body>
+    <!-- Banner vertica -->
+    <header>
+      <div class="div1">
+        <img src="../../assets/img/LogoWLANS_sinfondo.png" alt="logo WLAN" />
+        <a href="./index.html">admin</a>
+      </div>
+      <div class="div2">
+        <input type="text" id="buscador" class="btn_buscador" />
+        <button>Buscar</button>
+      </div>
+      <div class="div3">
+        <a href="./index.html">admin</a>
+      </div>
+    </header>
+
+    <!-- baner  -->
+    <div>
+      <div class="container-fluid">
+        <div class="row flex-nowrap">
+          <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+            <div
+              class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100"
+            >
+              <a
+                href="/"
+                class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none"
+              >
+                <span class="fs-5 d-none d-sm-inline">Menu</span>
+              </a>
+              <ul
+                class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+                id="menu"
+              >
+                <li class="nav-item">
+                  <a href="#" class="nav-link align-middle px-0">
+                    <i class="fs-4 bi-house"></i>
+                    <span onclick="ver_libros()" class="ms-1 d-none d-sm-inline"
+                      >Ver todos los Libros</span
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#submenu1"
+                    data-bs-toggle="collapse"
+                    class="nav-link px-0 align-middle"
+                  >
+                    <i class="fs-4 bi-speedometer2"></i>
+                    <span
+                      onclick="mostrarCategorias()"
+                      class="ms-1 d-none d-sm-inline"
+                      >Categorias</span
+                    >
+                  </a>
+                  <ul
+                    class="collapse show nav flex-column ms-1"
+                    id="submenu1"
+                    data-bs-parent="#menu"
+                  >
+                    <li class="w-100">
+                      <a href="#" class="nav-link px-0">
+                        <span class="d-none d-sm-inline"
+                          >Crear nuevas categoria</span
+                        >
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link px-0">
+                        <span class="d-none d-sm-inline" onclick="crearLibro()"
+                          >Crear nuevos libros</span
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a
+                    href="#submenu2"
+                    data-bs-toggle="collapse"
+                    class="nav-link px-0 align-middle"
+                  >
+                    <i class="fs-4 bi-bootstrap"></i>
+                    <span class="ms-1 d-none d-sm-inline">Ver Usuario </span></a
+                  >
+                  <ul
+                    class="collapse nav flex-column ms-1"
+                    id="submenu2"
+                    data-bs-parent="#menu"
+                  >
+                    <li class="w-100">
+                      <a href="#" class="nav-link px-0">
+                        <span class="d-none d-sm-inline">Crear usuarios</span>
+                        1</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link px-0">
+                        <span class="d-none d-sm-inline">Item</span> 2</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <hr />
+              <div class="dropdown pb-4">
+                <a
+                  href="#"
+                  class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                  id="dropdownUser1"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="https://github.com/mdo.png"
+                    alt="hugenerd"
+                    width="30"
+                    height="30"
+                    class="rounded-circle"
+                  />
+                  <span class="d-none d-sm-inline mx-1">loser</span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                  <li><a class="dropdown-item" href="#">New project...</a></li>
+                  <li><a class="dropdown-item" href="#">Settings</a></li>
+                  <li><a class="dropdown-item" href="#">Profile</a></li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li><a class="dropdown-item" href="#">Sign out</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col py-3">
+            <!--Seccion para filtrar por categoria -->
+            <section class="por_categoria" id="por_categoria">
+              <h2>Selecione una categoria</h2>
+              <form action="" method="Post" id="form1" name="form1">
+                <select id="categoria" name="categoria"></select>
+                <button id="boton">Consultar categoria</button>
+              </form>
+              <!--seccion para pintar los libros por categoria-->
+              <div id="data"></div>
+            </section>
+
+            <!-- seccion para mostrar todos los libros  -->
+            <section class="ver_libros" id="ver_libros">
+              <h2>Ver todos los libros</h2>
+              <table class="table table-dark table-sm">
+                <caption>
+                  La lista contiene todos los libros actualmente disponibles.
+                </caption>
+                <tr>
+                  <th>Id:</th>
+                  <th>Nombre:</th>
+                  <th>Autor:</th>
+                  <th>Editorial:</th>
+                  <th>anos de publicacion:</th>
+                  <th>paginas</th>
+                </tr>
+                <tbody id="data1"></tbody>
+              </table>
+
+              <!-- div para modal -->
+              <div id="modal_container"></div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Page -->
+    <div class="page">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- archivos js bootstrao -->
+
+    <script src="./app.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./main.js"></script>
+    <script src="./js/categoria.js"></script>
+  </body>
+</html>
+/

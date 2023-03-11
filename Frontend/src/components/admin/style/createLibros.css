@@ -1,0 +1,280 @@
+/* Estilos generales  */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+
+:root {
+  --onecolor: #A1594C;
+  --twocolor: #BAC4D0;
+  --threecolor: #50555D;
+  --fourcolor :#1B2437;
+  --fivecolor:#0d0d11;
+  --sixcolor:#DAC2BB;
+  --sevencolor:#FAFBFD;
+
+  --textfont: 'Merriweather', sans-serif;
+  --tittlefont: 'Oswald', sans-serif;
+
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--textfont);
+}
+body{
+  width: 100vw;
+  min-width: 360px;
+  background: rgb(27, 36, 55);
+  background: radial-gradient(circle, rgba(27,36,55,1) 0%, rgba(13,13,17,1) 91%);
+  overflow-x: hidden;
+  z-index: 1;
+
+}
+/* header  */
+header{
+  margin-bottom: 20px;
+  display: flex;
+}
+
+header img{
+  width: 224px;
+  height: 150px;
+
+}
+
+
+.div1{
+  margin-right: 50px;
+}
+.div2{
+  justify-content: center;
+align-items:  center;
+padding-left: 50px;
+margin-right: 50px;
+padding-top:50px ;
+width: 600px;
+}
+.div2 input{
+  width: 400px;
+  background-color: #0d0d11;
+  border-radius: 10px ;
+  color: #FAFBFD;
+  border: 2px solid var(--sevencolor);
+}
+
+.div2 button{
+  background-color:var(--fivecolor);
+  border-radius: 10px;
+  color: var(--sevencolor);
+  border: 2px solid var(--sevencolor);
+  width: 80px;
+}
+.div2 button:hover{
+  background-color:var(--onecolor);
+  border-radius: 10px;
+  color: var(--fivecolor);
+  border: 2px solid var(--fivecolor);
+  width: 80px;
+}
+
+.div3{
+  justify-content: center;
+  width: 200px;
+  align-items:  end;
+  padding-top:50px ;
+  padding-left: 50px;
+ margin-left: 50px;
+}
+
+.div1 a, .div3 a,a {
+  color: var(--twocolor);
+  text-decoration: none;
+}
+
+h5{
+  color: var(--twocolor);
+  margin: auto;
+  width: 50%;
+  font-family: var(--tittlefont);
+ padding: 20px;
+ font-size: 250% ;
+}
+/* formulario */
+.formCrear{
+ background-color: var(--fourcolor);
+border: solid 5px var(--fivecolor);
+border-radius: 10px;
+margin: auto;
+width: 50%;
+color:  var(--sevencolor);
+}
+
+.formCrear label{
+  width:200px;
+  margin-left: 50px;
+  padding-top: 20px;
+	display:inline-block;
+}
+
+input[type=text], select ,input[type=date],input[type=number]{
+  width:280px;
+  padding: 10px 15px;
+  margin: 12px 5px;
+  border-radius: 10px;
+  box-sizing: border-box; 
+  background-color: var(--fivecolor);
+  border: 1px solid #1B2437;
+  color: var(--sevencolor); 
+}
+
+textarea{
+  width:300px;
+  background-color: var(--fivecolor);
+  border: 1px solid var(--fourcolor);
+  color: var(--sevencolor); 
+  border-radius: 10px;
+  margin-left: 240px;
+  height: 100px;
+}
+
+.formCrear button {
+  color: var(--fivecolor);
+  background-color:var(--threecolor);
+  font-family: var(--textfont);
+  margin-left: 240px;
+  margin-top: 2px;
+}
+
+.formCrear p{
+  font-family: var(--sevencolor);
+  margin-left: 240px;
+  padding: 10px;
+}
+
+@media (max-width: 925px) {
+
+  html{
+    overflow-x: hidden;
+  }
+  body{
+    overflow-x: hidden;
+  }
+
+header{
+    margin-bottom: 5px;
+    display: flex;
+  }
+
+header img{
+  max-width: 60%;
+  max-height: 80%;
+}
+
+.div1{
+  margin-right: 30px;
+}
+.div2{
+padding-left: 30px;
+margin-right: 30px;
+padding-top:20px ;
+width: 60%;
+}
+.div2 input{
+  max-width: 300px;
+  border-radius: 10px ;
+
+}
+
+.div2 button{
+  width: 80px;
+  height: 40px;
+}
+
+.div3{
+
+  max-width: 15%;
+  padding-top:50px ;
+  padding-left: 10px;
+ margin-left: 50px;
+}
+h5{
+  font-size: 20px;
+  padding: 5px;
+}
+
+
+textarea{
+  max-width:300px;
+  margin-left: 5px;
+  height: 100px;
+  padding: 20px;
+}
+
+.formCrear button ,.formCrear p{
+  margin-left: 40px;
+  margin-top: 2px;
+
+}
+
+
+}
+
+@media (max-width: 580px) {
+
+  
+.div1{
+
+  max-width: 25%;
+}
+.div2{
+margin-right: 10px;
+padding-top:30px ;
+max-width: 50%;
+}
+.div2 input{
+  max-width: 70%;
+  border-radius: 10px ;
+
+}
+
+.div2 button{
+  width: 60px;
+  height: 40px;
+}
+
+.div3{
+
+  max-width: 20%;
+  padding-top:50px ;
+  padding-left: 5px;
+ margin-left: 5px;
+}
+h5{
+  font-size: 20px;
+  padding: 5px;
+}
+
+.formCrear{
+ border-radius: 10px;
+ margin: auto;
+ width: 70%;
+ }
+
+textarea{
+  max-width:280px;
+  margin-left: 5px;
+  height: 100px;
+  padding: 20px;
+}
+¨
+.formCrear button ,.formCrear p{
+  margin-left: 40px;
+  margin-top: 2px;
+
+}
+
+
+
+
+}

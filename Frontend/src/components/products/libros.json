@@ -1,0 +1,275 @@
+[
+  {
+    "id":1,
+    "nombre":"El origen de las especies",
+    "autor":"Charles Darwin",
+    "editorial":"Editorial ",
+    "ano_de_publicacion":1859,
+    "descripcion":"La teoría de la evolución, que se explica en el volumen, cambió el mundo para siempre",
+    "pagina":696,
+    "foto":"https://m.media-amazon.com/images/I/61ka1h-XjNL._SL500_.jpg",
+    "categoria_id ":1
+  },
+  {
+    "id":2,
+    "nombre":"The Feynman Lectures on Physics",
+    "autor":"Richard Feynman",
+    "editorial":"Basic Books",
+    "ano_de_publicacion":2011,
+    "descripcion":"es un conjunto de libros sobre física basado en las conferencias de Richard P. Feynman, premio Nobel de física,",
+    "pagina":1552,
+    "foto":"https://images.cdn3.buscalibre.com/fit-in/360x360/f2/db/f2db2b4758f73909ac0e4ae0562b55bb.jpg",
+    "categoria_id ":1
+  },
+  {
+    "id":3,
+    "nombre":"Cosmo",
+    "autor":"Carl Sagan",
+    "editorial":"Editorial Planeta",
+    "ano_de_publicacion":12,
+    "descripcion":"Cosmos es uno de los libros más famosos de Carl Sagan, y está basado en su archiconocida serie “Cosmos: un viaje personal”, que él mismo produjo con su esposa Ann Druyan",
+    "pagina":384,
+    "foto":"https://planetadelibroscom.cdnstatics2.com/usuaris/libros/fotos/10/m_libros/portada_cosmos_carl-sagan_201505260939.jpg",
+    "categoria_id ":1
+  },{
+    "id":4,
+    "nombre":"El gen egoísta",
+    "autor":"Richard Dawkins",
+    "editorial":"Edición en Español ",
+    "ano_de_publicacion": 1990,
+    "descripcion":"Dawkins expone su idea del gen egoísta como vehículo para explicar cuál es el sujeto de la evolución natural. ",
+    "pagina":424,
+    "foto":"https://m.media-amazon.com/images/I/41+p4Z1VHHL._SX313_BO1,204,203,200_.jpg",
+    "categoria_id ":1
+  },{
+    "id":5,
+    "nombre":"Pensar rápido, pensar despacio",
+    "autor":"Daniel Kahneman",
+    "editorial":"DEBATE",
+    "ano_de_publicacion":2012,
+    "descripcion":" Este libro reúne décadas de investigación del autor en colaboración con el psicólogo Amos Tversky.",
+    "pagina":825,
+    "foto":"https://m.media-amazon.com/images/I/41O0Fp-pW3L.jpg",
+    "categoria_id ":1
+  },{
+    "id":6,
+    "nombre":"Cinco mil años de palabras",
+    "autor":"Carlos Prieto",
+    "editorial":"Fondo de Cultura Económica",
+    "ano_de_publicacion":2005,
+    "descripcion":"Cómo salimos del silencio? Este y otros interrogantes fluyen como una constante en esta minuciosa investigación, que ofrece un enfoque panorámico sobre el estudio de las lenguas.",
+    "pagina":311,
+    "foto":"https://m.media-amazon.com/images/I/61Re3Q3BB-L.jpg",
+    "categoria_id ":2
+  },
+  {
+    "id":7,
+    "nombre":"La lengua española en México",
+    "autor":" José G. Moreno de Alba",
+    "editorial":" Fondo de Cultura Económica",
+    "ano_de_publicacion":2003,
+    "descripcion":"Esta obra reúne artículos relativos al lenguaje y, sobre todo, a la lengua española, en particular a la hablada y escrita en México",
+    "pagina":2612 ,
+    "foto":"https://m.media-amazon.com/images/I/51gRZgn2GcL.jpg",
+    "categoria_id ":2
+  },{
+    "id":8,
+    "nombre":"Los 1001 años de la lengua española.",
+    "autor":"Antonio Alatorre",
+    "editorial":"Fondo de Cultura Económica",
+    "ano_de_publicacion":2008,
+    "descripcion":"Antonio Alatorre se despoja de cualquier término técnico, prescinde de la yod y del difícil código que sólo entienden los lingüistas para platicarnos, como en una charla de café, la historia de la lengua española. ",
+    "pagina":355,
+    "foto":"https://m.media-amazon.com/images/I/51DQbUUmdyL.jpg",
+    "categoria_id ":2
+  },{
+    "id":9,
+    "nombre":"Curso de lingüística general",
+    "autor":"Ferdinand de Saussure",
+    "editorial":"Fontamara",
+    "ano_de_publicacion":2010,
+    "descripcion":"entre 1907 y 1911 Ferdinand de Saussure da tres cursos de lingüística general en la Universidad de Ginebra que supondrían, prácticamente, y en líneas generales, el nacimiento de la lingüística contemporánea",
+    "pagina":934,
+    "foto":"https://m.media-amazon.com/images/I/81TQdzbwuOL._AC_UY218_.jpg",
+    "categoria_id ":2
+  },
+  {
+    "id":10,
+    "nombre":"Mitos de la lengua",
+    "autor":"María de Pilar Montes de Oca Sicilia",
+    "editorial":"Otras Inquisiciones",
+    "ano_de_publicacion":2011,
+    "descripcion":"Este es un libro que de manera amable, entretenida y práctica, desvela muchas de las verdades de uno de los más importantes recursos que tiene el hombre para enfrentarse al mundo que le rodea",
+    "pagina":272,
+    "foto":"https://2.bp.blogspot.com/-aNVjs6ogYtk/U71-QGegewI/AAAAAAAAAgE/JjuSd2p8fIg/s1600/9786074571684.jpg",
+    "categoria_id ":2
+  },
+  {
+    "id":11,
+    "nombre":"Mar muerto",
+    "autor":"Brian Keene",
+    "editorial":"Dolmen Editorial",
+    "ano_de_publicacion":12,
+    "descripcion":"Una historia de amor entre hombres, mujeres, el mar y Iemanja contada en el puerto baiano. Un romance para profundizar en las raices culturales brasileras, escrito  por el escritor más baiano. ",
+    "pagina":288,
+    "foto":"https://res.cloudinary.com/worldpackers/image/upload/c_limit,f_auto,q_auto,w_1140/nflhkaoxmbnulve8jdg4",
+    "categoria_id ":3
+  },{
+    "id":12,
+    "nombre":"Eudaimonia",
+    "autor":"Allan Formigoni",
+    "editorial":"",
+    "ano_de_publicacion":12,
+    "descripcion":"La historia cuenta un período de reflexión del personaje de Joshua, pero podría basarse en la vida de muchas personas: descontento con el trabajo, ausencia de propósito en la vida, búsqueda de profundizar en la razón de esta infelicidad y cómo superarla.",
+    "pagina": 240,
+    "foto":"https://res.cloudinary.com/worldpackers/image/upload/c_limit,f_auto,q_auto,w_1140/dm2tle41otldwcgggdkh",
+    "categoria_id ":3
+  },{
+    "id":13,
+    "nombre":"Colección Distopías",
+    "autor":"George Orwell, Ray Bradbury, Aldous Huxley, George Orwell",
+    "editorial":"Edisur",
+    "ano_de_publicacion":1949,
+    "descripcion":"la distopía de George Orwell es considerada por muchos una obra visionaria de los tiempos que nos ha tocado vivir. Aborda temas como la manipulación de la información, la vigilancia masiva ",
+    "pagina": 1984,
+    "foto":"https://images.cdn1.buscalibre.com/fit-in/360x360/12/61/1261059b85361979d2cd74ee48133576.jpg",
+    "categoria_id ":4
+  },{
+    "id":14,
+    "nombre":"Cien años de soledad",
+    "autor":"Gabriel García Márquez",
+    "editorial":"Debolsillo",
+    "ano_de_publicacion":2014,
+    "descripcion":"La novela del escritor colombiano que narra las vicisitudes de la familia Buendía a lo largo de siete generaciones en el ficticio pueblo de Macondo es considerado por muchos la mejor novela de todos los tiempos",
+    "pagina":494,
+    "foto":"https://images.cdn1.buscalibre.com/fit-in/360x360/3b/4d/3b4de63880402ceb3ac08823d066afe1.jpg",
+    "categoria_id ":4
+  },{
+    "id":15,
+    "nombre":"La balada de Mulán",
+    "autor":"Mónica Rodríguez Suárez",
+    "editorial":"Edelvives",
+    "ano_de_publicacion":2020,
+    "descripcion":"Nadie puede acudir en su lugar. El padre no tiene hijos en edad de luchar. Mulán no tiene hermanos en edad de luchar. El hijo varón es aún muy pequeño”. Son estas circunstancias las que llevan a una joven fuerte y valiente a tomar la decisión de escaparse de casa disfrazada de hombre para luchar por su padre.",
+    "pagina":48,
+    "foto":"https://cdn.edelvives.es/docs/catalogo/13654/imgs/original/168125_Cub_Mulan_EvWeb.jpg",
+    "categoria_id ":5
+  },{
+    "id":16,
+    "nombre":"La Odisea",
+    "autor":"Homero",
+    "editorial":"ANAYA",
+    "ano_de_publicacion":2012,
+    "descripcion":"Esta edición presenta la historia de Ulises en forma de cómic. Ya puede volver con su amada Penélope y su hijo Telémaco porque la Guerra de Troya ha terminado",
+    "pagina":160,
+    "foto":"https://imagessl2.casadellibro.com/a/l/t7/02/9788467828702.jpg",
+    "categoria_id ":5
+  },
+  {
+    "id":17,
+    "nombre":"'Lo único'",
+    "autor":"Gary Keller",
+    "editorial":"AGUILAR",
+    "ano_de_publicacion":12,
+    "descripcion":" Gary Keller te propone que te centres en 'lo único', lo verdaderamente importante, para ser más productivo. La pregunta que te quiere ayudar a responder es: ¿Qué es 'Lo único' que podrías hacer ahora que haría que todo lo demás fuera más fácil o innecesario?",
+    "pagina":336,
+    "foto":"https://imagessl9.casadellibro.com/a/l/t7/39/9788403014039.jpg",
+    "categoria_id ":6
+  },{
+    "id":18,
+    "nombre":"Mañanas milagrosas",
+    "autor":"Hal Elrod",
+    "editorial":"Rústica",
+    "ano_de_publicacion":2016,
+    "descripcion":"'Mañanas milagrosas' promete ayudarte a despertarte cada día con más energía, motivación y concentración para que tu vida suba de nivel. ",
+    "pagina":202,
+    "foto":"https://panamericana.vtexassets.com/arquivos/ids/332130-800-auto?v=637003662682870000&width=800&height=auto&aspect=true",
+    "categoria_id ":6
+  },
+  {
+    "id":19,
+    "nombre":"La Ilíada",
+    "autor":"Homero",
+    "editorial":"Rústica",
+    "ano_de_publicacion":1895,
+    "descripcion":"La epopeya griega que cambiaría para siempre la literatura occidental fue también el primer gran poema de nuestras letras ",
+    "pagina":544,
+    "foto":"https://panamericana.vtexassets.com/arquivos/ids/451770-1600-auto?v=637962644255200000&width=1600&height=auto&aspect=true",
+    "categoria_id ":7
+  },
+  {
+    "id":20,
+    "nombre":"Rimas y leyendas",
+    "autor":"Gustavo Adolfo Bécquer",
+    "editorial":"Tapa dura",
+    "ano_de_publicacion":1871,
+    "descripcion":"Embajador de un romanticismo que trató de abrir a nuevas corrientes literarias, Bécquer malvivió en Madrid durante gran parte de su vida sin ver parte de su obra publicada",
+    "pagina":304,
+    "foto":"https://global-uploads.webflow.com/6034d7d1f3e0f52c50b2adee/6347ff766ce33d8248f89003_9788418395840.jpeg",
+    "categoria_id ":7
+  },{
+    "id":21,
+    "nombre":"Después de diciembre",
+    "autor":"Joana Marcús",
+    "editorial":"Montana",
+    "ano_de_publicacion":2022,
+    "descripcion":"Los protagonistas de Antes de diciembre, la primera parte de la saga, vuelven a encontrarse un año después de su ruptura y deberán enfrentarse a sus sentimientos. ",
+    "pagina":43,
+    "foto":"https://imagessl7.casadellibro.com/a/l/t7/17/9788418798917.jpg",
+    "categoria_id ":8
+  },{
+    "id":22,
+    "nombre":"El miedo restante",
+    "autor":"Clara Cortés",
+    "editorial":"Loqueleo",
+    "ano_de_publicacion":2021,
+    "descripcion":"Luc Álvarez piensa que su vida es aburrida: la gente de su entorno no cambia, ni su motivación, ni su trabajo en la cafetería Café Actually, propiedad de Nick, un joven enamorado del cine que aspira a convertirse en guionista",
+    "pagina":288,
+    "foto":"https://imagessl9.casadellibro.com/a/l/t7/49/9788491223849.jpg",
+    "categoria_id ":8
+  },
+  {
+    "id":23,
+    "nombre":"Dune",
+    "autor":"Frank Herbert",
+    "editorial":"Ace",
+    "ano_de_publicacion":1990,
+    "descripcion":" Posee un universo fascinante, con el planeta Arrakis en su corazón. Un planeta desértico y hostil, pero el único en el que brota la especia que permite los viajes espaciales y sostiene el Imperio Galáctico",
+    "pagina":896 ,
+    "foto":"https://m.media-amazon.com/images/I/41+L9Q+rCLL._SX277_BO1,204,203,200_.jpg",
+    "categoria_id ":8
+  },
+   {
+    "id":25,
+    "nombre":"Un mundo feliz",
+    "autor":"Aldous Huxley",
+    "editorial":"DEBOLSILLO",
+    "ano_de_publicacion":2003,
+    "descripcion":" La aterradora visión del mundo feliz nos descubre una sociedad que ha creído que la ciencia podía solucionar todos sus problemas, desde la lucha de clases al sentido de la vida; pero sólo ha creado una ilusión que necesita del consumo, el sexo recreativo y la droga para no desmoronarse.",
+    "pagina":256 ,
+    "foto":"https://imagessl7.casadellibro.com/a/l/t7/57/9788497594257.jpg",
+    "categoria_id ":9
+  },
+  {
+    "id":26,
+    "nombre":"Scoop",
+    "autor":"Evelyn Waugh",
+    "editorial":"Back Bay Books",
+    "ano_de_publicacion": 2012,
+    "descripcion":" Esta divertida novela cuenta la historia de un periodista que es enviado a cubrir la revolución de los estados balcánicos, el problema es que se queda dormido en el tren y termina en el lugar equivocado, pero no deja que eso lo detenga.",
+    "pagina":304 ,
+    "foto":"https://m.media-amazon.com/images/I/51Ipv1VElwL._SX492_BO1,204,203,200_.jpg",
+    "categoria_id ":10
+  }, {
+    "id":27,
+    "nombre":"Carry On, Jeeves",
+    "autor":"P.G. Wodehouse",
+    "editorial":"Wilder Publications",
+    "ano_de_publicacion": 2021,
+    "descripcion":"Este es puro humor británico clásico. La novela de Wodehouse es la historia de un aristócrata inútil, llamado Wooster, y su mayordomo / cuidador, Jeeves, quienes constantemente se meten en problemas por culpa del primero",
+    "pagina":861 ,
+    "foto":"https://m.media-amazon.com/images/I/41iYeCWdAWL.jpg",
+    "categoria_id ":10
+  }
+
+]
