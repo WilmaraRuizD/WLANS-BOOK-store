@@ -147,7 +147,7 @@ textarea{
 }
 
 .formCrear p{
-  font-family: var(--sevencolor);
+  font-family: var(--textfont);
   margin-left: 240px;
   padding: 10px;
 }
