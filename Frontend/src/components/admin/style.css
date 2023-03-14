@@ -257,8 +257,8 @@ form button{
     }
   
   header img{
-    max-width: 60%;
-    max-height: 80%;
+    width: 60%;
+    height: 80%;
   }
   
   .div1{
@@ -339,3 +339,33 @@ form button{
     }
 
   }
+
+  @media (max-width: 580px) {
+
+
+.modal_container {
+ 
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+
+  
+}
+.modal__conten {
+  max-width: 300px;
+  max-height: 400px;
+  padding: 10px;
+
+
+  }
+
+  .modal__conten h3, .modal__conten h4{
+    font-size: 14px;
+  };
+  .modal_img p{
+    font-size: 14px;
+  }
+ .modal_img img{
+  height: 160px;
+ }
+}
