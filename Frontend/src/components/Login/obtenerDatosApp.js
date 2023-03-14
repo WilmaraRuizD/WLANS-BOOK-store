@@ -7,7 +7,6 @@ let telefonoExiste = false;
 //Obtiene los datos que se almacenan en el LocalStorage
 let datosUsuarios = JSON.parse(localStorage.getItem('usuarios'));
 
-console.log(datosUsuarios);
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   let contacto = contactoInput.value;
@@ -37,8 +36,10 @@ form.addEventListener('submit', (event) => {
     usuarioEncontrado = datosUsuarios.find(usuario => usuario.email === contacto);
     //Encontramos al ususario que coincida con el email ingresado
     if (usuarioEncontrado && usuarioEncontrado.password === password) {
-      swal('Felicidades', '¡Ingreso Exitoso!', 'success');
-      console.log(usuarioEncontrado);
+      swal('Felicidades', '¡Ingreso Exitoso!', 'success').then(
+        value => {
+          window.location.href = './../../../index.html';
+        });
     } else {
       swal('Error', 'Tu correo/telefono o contraseña son incorrectas', 'error');
     }
@@ -48,7 +49,10 @@ form.addEventListener('submit', (event) => {
       usuarioEncontrado = datosUsuarios.find(usuario => usuario.telefono === contacto);
       //Encontramos al ususario que coincida con el telefono ingresado
       if (usuarioEncontrado && usuarioEncontrado.password === password) {
-        swal('Felicidades', '¡Ingreso Exitoso!', 'success');
+        swal('Felicidades', '¡Ingreso Exitoso!', 'success').then(
+          value => {
+            window.location.href = './../../../index.html';
+          });
         console.log(usuarioEncontrado);
       } else {
         swal('Error', 'Tu correo/telefono o contraseña son incorrectas', 'error');
