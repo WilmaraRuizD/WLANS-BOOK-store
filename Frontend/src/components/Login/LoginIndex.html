@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="LoginStyles.css">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <title>Login</title>
+</head>
+<body>
+  <article class="article-styles">
+    <section class="img-section-styles">
+    </section>
+
+    <section class="section-styles">
+      <div class="title-styles">
+        <h3>Inicia Sesión</h3>
+      </div>
+      <form>
+        <div class="form-sections-styles">
+          <div>
+            <label for="">Ingresa tu Correo o Número Teléfonico</label>
+            <input type="text" id="contacto" placeholder="Tu Correo..." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$|\d+" required>
+            <!--<input type="email" id="contacto" placeholder="Tu Correo...">-->
+          </div>
+    
+          <div>
+            <label for="">Ingresa tu Contraseña</label>
+            <input type="password" id="password" placeholder="Tu Contraseña..." required>
+          </div>
+        </div>
+  
+        <div class="div-submit">
+          <input class="submitRegistrar" type="submit" value="Iniciar Sesión">
+        </div>
+      </form>
+
+      <div class="count-exist-styles">
+        <div>
+          <p>¿Eres nuevo en WLANS BOOKS?</p>
+        </div>
+        <div class="iniciar-sesion-styles">
+          <a href="../Registro/registroIndex.html">Crea Tu Cuenta</a>
+        </div>
+      </div>
+
+      <script src="obtenerDatosApp.js"></script>
+    </section>
+  </article>
+</body>
+</html>

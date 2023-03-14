@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="registroStyles.css">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <title>Crea Tu Cuenta</title>
+</head>
+
+<body>
+  <article class="article-styles">
+    <section class="img-section-styles">
+    </section>
+
+    <section class="section-styles">
+      <div class="title-styles">
+        <h3>Crea Tu Cuenta</h3>
+      </div>
+
+      <form class="form-styles" action="https://formspree.io/f/xgebzvjz" method="POST">
+        <div class="form-sections-styles">
+          <div>
+            <label>Tu Nombre</label>
+            <br>
+            <input type="text" placeholder="Tu nombre..." required>
+          </div>
+          <div>
+            <label>Tu Apellido</label>
+            <br>
+            <input type="text" placeholder="Tu apellido..." required>
+          </div>
+        </div>
+
+
+        <div class="form-sections-styles">
+          <div>
+            <label>Tu Correo Electrónico</label>
+            <br>
+            <input type="email" id="email" placeholder="Tu correo..." required>
+          </div>
+          <div>
+            <label>Tu Numero Telefónico</label>
+            <br>
+            <input type="tel" id="telefono" placeholder="Tu numero..." required>
+          </div>
+        </div>
+
+        <div class="form-sections-styles">
+          <div>
+            <label>Tipo de Documento</label>
+            <br>
+            <select>
+              <option>Seleccione el Documento</option>
+              <option value="Cedula de Ciudadania">Cedula de Ciudadania</option>
+              <option value="Cedula de Extranjeria">Cedula de Extranjeria</option>
+              <option value="Pasaporte">Pasaporte</option>
+            </select>
+          </div>
+          <div>
+              <label>Tu Numero de Identidad</label>
+              <br>
+              <input type="text" placeholder="Tu documento..." required>
+          </div>
+        </div>
+
+        <div class="form-sections-styles">
+          <div>
+            <label>Tu Departamento</label>
+            <br>
+            <select id="departamento" required>
+              <option>Tu Departamento</option>
+            </select>
+          </div>
+          <div>
+            <label>Tu Ciudad o Municipio</label>
+            <br>
+            <select id="ciudad" required>
+              <option>Tu Ciudad o Municipio</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="direction-styles">
+          <label>Tu Dirección de Residencia</label>
+          <br>
+          <input type="text" placeholder="Tu dirección..." required>
+        </div>
+
+        <div class="form-sections-styles">
+          <div>
+            <label>Tu Contraseña</label>
+            <br>
+            <input type="password" id="password" placeholder="Tu contraseña..." required>
+          </div>
+          <div>
+            <label>Confirma la Contraseña</label>
+            <br>
+            <input type="password" id="confirm-password" placeholder="Tu contraseña..." required>
+          </div>
+        </div>
+
+        <div class="accept-styles">
+          <div>
+            <input type="checkbox" required>
+          </div>
+          <div>
+            <p>Aceptas las Condiciones de Uso y el Aviso de Privacidad de wlansbooks.com.</p>
+          </div>
+        </div>
+
+        <div class="div-submit">
+          <input class="submitRegistrar" type="submit" value="Registrarse" required>
+        </div>
+      </form>
+
+      <div class="count-exist-styles">
+        <div>
+          <p>¿Ya tienes una cuenta?</p>
+        </div>
+        <div class="iniciar-sesion-styles">
+          <a href="../Login/LoginIndex.html">Iniciar Sesión</a>
+        </div>
+      </div>
+      
+    </section>
+  </article>
+
+  <script src="ubicacionApp.js"></script>
+  <script src="guardarDatosApp.js"></script>
+</body>
+
+</html>
