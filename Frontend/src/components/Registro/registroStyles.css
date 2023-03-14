@@ -32,7 +32,7 @@ input, select {
   border-radius: 4px;
   box-sizing: border-box;
 }
-input[type=submit]{
+.submitRegistrar{
   font-family: 'Nunito+Sans', sans-serif;
   font-size: 14px;
   width: 100%;
@@ -43,6 +43,16 @@ input[type=submit]{
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+.submitRegistrar:hover {
+  transform: scale(1.05, 1.05);
+  background-color: #0D0D11;
+  color: #f2f2f2;
+}
+.submitRegistrar:active {
+  transform: scale(0.95, 0.95);
+  background-color: #0D0D11;
+  color: #f2f2f2;
 }
 input[type=checkbox]{
   font-family: 'Nunito+Sans', sans-serif;
@@ -130,16 +140,32 @@ input[type=checkbox]{
 .iniciar-sesion-styles a:link {
   color: red;
 }
-
 .iniciar-sesion-styles a:visited {
   color: #1b2437;
 }
-
 .iniciar-sesion-styles a:hover {
   color: #a1594c;
 }
-
 .iniciar-sesion-styles a:active {
   color: #0d0d11;
 }
+.swal-button {
+  padding: 7px 19px;
+  border-radius: 2px;
+  background-color: #1b2437;
+  font-size: 12px;
+  border: 1px solid #1b2437;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+}
+.swal-button:hover {
+  transform: scale(1.05, 1.05);
+  background-color: #0D0D11;
+  color: #f2f2f2;
+}
+.swal-button:active {
+  transform: scale(0.95, 0.95);
+  background-color: #0D0D11;
+  color: #f2f2f2;
+}
+
 

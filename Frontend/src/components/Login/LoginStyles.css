@@ -43,6 +43,18 @@ input[type=submit]{
   border-radius: 4px;
   cursor: pointer;
 }
+
+.submitRegistrar:hover {
+  transform: scale(1.05, 1.05);
+  background-color: #0D0D11;
+  color: #f2f2f2;
+}
+.submitRegistrar:active {
+  transform: scale(0.95, 0.95);
+  background-color: #0D0D11;
+  color: #f2f2f2;
+}
+
 .article-styles{
   width: 100%;
   display:grid;

@@ -13,7 +13,7 @@ xhttp.onreadystatechange = function () {
     // Acceder a los datos del archivo JSON
     const ubicacion = datos.ubicacion;
 
-    for (let i = 0; i < ubicacion.length; i++) {//Agregamos los depatarmentos al option desde el json
+    for (let i = 0; i < ubicacion.length; i++) {//Agregamos los departamentos al option desde el json
       let optionDepartamento = document.createElement('option');
       optionDepartamento.value = ubicacion[i].id;
       optionDepartamento.text = ubicacion[i].departamento;
@@ -23,7 +23,6 @@ xhttp.onreadystatechange = function () {
     departamento.addEventListener("change", () => {//Cada vez que la opcion cambia de departamento  entrara a esta funcion 
       /*Cuando seleccione un departamento, mostrara los municipios del departamento seleccionado*/
       index = departamento.selectedIndex;
-      console.log(index);
 
       if (index > 0) {
         /*removemos los municipios del departamento anteriormente seleccionado*/

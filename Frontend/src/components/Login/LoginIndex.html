@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="LoginStyles.css">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <title>Login</title>
 </head>
 <body>
@@ -16,11 +17,12 @@
       <div class="title-styles">
         <h3>Inicia Sesión</h3>
       </div>
-      <form class="form-styles" action="https://formspree.io/f/xpzelwgj" method="POST">
+      <form>
         <div class="form-sections-styles">
           <div>
             <label for="">Ingresa tu Correo o Número Teléfonico</label>
-            <input type="email" id="contacto" placeholder="Tu Correo..." pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}|(\d{3})\s*(\d{3})\s*(\d{4})" required>
+            <input type="text" id="contacto" placeholder="Tu Correo..." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$|\d+" required>
+            <!--<input type="email" id="contacto" placeholder="Tu Correo...">-->
           </div>
     
           <div>
@@ -30,7 +32,7 @@
         </div>
   
         <div class="div-submit">
-          <input type="submit" value="Iniciar Sesión">
+          <input class="submitRegistrar" type="submit" value="Iniciar Sesión">
         </div>
       </form>
 
@@ -43,6 +45,7 @@
         </div>
       </div>
 
+      <script src="obtenerDatosApp.js"></script>
     </section>
   </article>
 </body>
