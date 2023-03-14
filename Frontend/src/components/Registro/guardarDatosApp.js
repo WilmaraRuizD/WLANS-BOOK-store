@@ -28,8 +28,10 @@ form.addEventListener('submit', (event) => {
     localStorage.setItem('usuarios', JSON.stringify(usuarios));//Guarda en la base de usuarios el nuevo usuario
     localStorage.setItem('usuario', JSON.stringify(usuario));//Guarda un usuario
 
-    swal('Felicidades','Su usuario ha sido registrado.','success');
-    
+    swal('Felicidades','Su usuario ha sido registrado.','success').then(
+      value => {
+        window.location.href = '../Login/LoginIndex.html';
+      });
   } else {
     swal('Error','Las contraseñas no coinciden.','error');
   }

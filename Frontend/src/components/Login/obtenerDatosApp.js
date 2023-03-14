@@ -38,7 +38,7 @@ form.addEventListener('submit', (event) => {
     if (usuarioEncontrado && usuarioEncontrado.password === password) {
       swal('Felicidades', '¡Ingreso Exitoso!', 'success').then(
         value => {
-          window.open("./../../../index.html");
+          window.location.href = './../../../index.html';
         });
     } else {
       swal('Error', 'Tu correo/telefono o contraseña son incorrectas', 'error');
@@ -51,7 +51,7 @@ form.addEventListener('submit', (event) => {
       if (usuarioEncontrado && usuarioEncontrado.password === password) {
         swal('Felicidades', '¡Ingreso Exitoso!', 'success').then(
           value => {
-            window.open("./../../../index.html");
+            window.location.href = './../../../index.html';
           });
         console.log(usuarioEncontrado);
       } else {
