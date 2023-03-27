@@ -195,7 +195,15 @@ input[type=checkbox] {
   background-color: #0D0D11;
   color: #f2f2f2;
 }
-
+.title-styles a{
+display: flex;
+align-items: center;
+text-decoration: none;
+color: black;
+}
+.arrowimg{
+  width: 40px;
+}
 
 @media (max-width: 1050px) {
   label {
