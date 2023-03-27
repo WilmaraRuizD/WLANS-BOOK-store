@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +10,7 @@
 </head>
 
 <body>
-  <!-- Header NAV -->
+ 
   <header>
     <a class="logo" href="../../../index.html"><img src="../../assets/img/LogoWLANS.png" alt="Logo WLANS Books Store"></a>
     <nav>
@@ -17,8 +18,8 @@
             <li><a href="../../../index.html">Inicio</a></li>
             <li><a href="../about/about.html">Acerca de</a></li>
             <li><a href="./contact.html">Contáctenos</a></li>
-            <li><a href="./../products/products.html">productos</a></li>
-            <li><a href="./../Registro/registroIndex.html">Crear cuenta</a></li>
+            <li><a href="../products/products.html">productos</a></li>
+            <li><a href="../Registro/registroIndex.html">Crear cuenta</a></li>
             <li><a href="#"> <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
                         viewBox="0 0 16 16">
                         <path
@@ -26,18 +27,19 @@
                     </svg> </a></li>
         </ul>
     </nav>
-    <a class="cta" href="./../Login/LoginIndex.html">Iniciar sesión</a>
+    <a class="cta" href="./../Frontend/src/components/Login/LoginIndex.html">Iniciar sesión</a>
     <p class="menu cta">Menu</p>
 </header>
+
 <div class="overlay">
     <a class="close">&times;</a>
     <div class="overlay__content">
         <a href="../../../index.html">Inicio</a>
         <a href="../about/about.html">Acerca de</a>
         <a href="./contact.html">Contáctenos</a>
-        <a href="./../products/products.html">productos</a>
+        <a href="../products/products.html">productos</a>
         <a href="../Registro/registroIndex.html">Crear cuenta</a>
-        <a href="../Login/LoginIndex.html">Iniciar Sesión</a>
+        <a href="#">Iniciar Sesión</a>
         <a href="#"> <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
                 viewBox="0 0 16 16">
                 <path
@@ -46,49 +48,84 @@
     </div>
 </div>
 
-    <section class="container-banner">
-      <header class="header"></header>
-    </section>
 
-    <div class="content">
-      <h1>Contáctenos</h1>
-      <div class="contact-wrapper">
-        <div class="contact-form">
-          <form id="contactenos" action="https://formspree.io/f/xbjeylkq" method="POST">
-            <input class="inputs" name="nombre" required type="text" placeholder="Nombre completo">
-            <input class="inputs" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required type="email" placeholder="Correo electrónico">
-            <input class="inputs" name="numero" pattern="[0-9]{10}" required type="number" placeholder="Número de contacto">
-            <textarea class="block" name="textarea" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
-            <input class="button" type="submit" value="Enviar">
-          </form>
+
+
+
+  <section class="container-banner">
+    <header class="header"></header>
+  </section>
+
+  <div class="content">
+    <h1>Contáctenos</h1>
+    <div class="contact-wrapper">
+      <div class="contact-form">
+        <form id="contactenos" action="https://formspree.io/f/xbjeylkq" method="POST">
+          <input class="inputs" name="nombre" required type="text" placeholder="Nombre completo">
+          <input class="inputs" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required type="email"
+            placeholder="Correo electrónico">
+          <input class="inputs" name="numero" pattern="[0-9]{10}" required type="number"
+            placeholder="Número de contacto">
+          <textarea class="block" name="textarea" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+          <input class="button" type="submit" value="Enviar">
+        </form>
+      </div>
+
+    </div>
+    <div class="contact-info">
+      <h3>Más información</h3>
+
+      <ul class="list">
+        <li> <img src="./../../assets/img/ubicacion.png" alt="ubicacion">Bogotá - Colombia</li>
+        <li> <img src="./../../assets/img/correo.png" alt="correo">wlansbokks@gmail.com</li>
+        <li> <img src="./../../assets/img/telefono.png" alt="telefono">333 222 22 22</li>
+      </ul>
+
+
+    </div>
+  </div>
+
+  <div class="container-banner2">
+    <h2>
+      Espacio publicitario
+    </h2>
+  </div>
+
+  <div id="alert"></div>
+
+  <footer>
+    <div class="footer-elements">
+        <div class="footer-ubicacion">
+            <h3>Ubicación</h3>
+            <p>Bogotá D.C.</p>
         </div>
-        
-      </div>
-      <div class="contact-info">
-        <h3>Más información</h3>
 
-         <ul class="list">
-          <li> <img src="./../../assets/img/ubicacion.png" alt="ubicacion">Bogotá - Colombia</li>
-          <li> <img src="./../../assets/img/correo.png" alt="correo">wlansbokks@gmail.com</li>
-          <li> <img src="./../../assets/img/telefono.png" alt="telefono">333 222 22 22</li>
-          </ul> 
+        <div class="footer-logo_redes">
+            <div>
+                <a class="logo" href="../../../index.html"><img src="../../assets/img/LogoWLANS.png"
+                        alt="Logo WLANS Books Store"></a>
+            </div>
+            <hr>
+            <div class="footer-icons">
+                <i class="fa-brands fa-github fa-2x" style="color: #ffffff;"></i>
+                <i class="fa-brands fa-linkedin fa-2x" style="color: #ffffff;"></i>
+                <i class="fa-brands fa-twitter fa-2x" style="color: #ffffff;"></i>
+            </div>
+        </div>
 
-
-      </div>
+        <div class="footer-correo">
+            <h3>Correo</h3>
+            <p><a href="mailto:contacto@wlansbooks.com"> contacto@wlansbooks.com</a></p>
+        </div>
     </div>
 
-    <div class="container-banner2">
-      <h2>
-        Espacio publicitario
-      </h2>
+    <div class="footer-copyright">
+        <p>Copyright © WLANS BOOKS - All Rights Reserved</p>
     </div>
+</footer>
 
-   <div id="alert">
 
-   </div>
-  
   <script src="contact.js"></script>
- 
-  
 </body>
+
 </html>
