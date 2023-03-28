@@ -1,5 +1,5 @@
 
-fetch('http://localhost:3022/api/libros/')
+fetch('http://localhost:3023/api/libros/')
     .then(response => response.json())
     .then(data => card(data))
     .catch(error => console.error(error))
@@ -30,7 +30,7 @@ function card(data) {
                     Páginas: ${data[i].pagina}
                     </p>
                     <div class="buttons" id="buttons">
-                        <button class="product_button" type="submit" onclick="boton()">
+                        <button class="product_button" id=${data[i].id}  type="submit" onclick="boton(${id})">
                             Agregar al carrito
                         </button>
 
@@ -50,7 +50,9 @@ function card(data) {
    
 }
 
-
+function boton(id) {
+    
+}
 
 function escucharbtn(id) {
     console.log(id);
