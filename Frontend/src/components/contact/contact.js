@@ -46,3 +46,24 @@ async function cargaForm(e) {
   }
 }
 
+// Formulario de suscripcion
+const form = document.querySelector('#subscribe-form');
+const emailInput = form.querySelector('#email-input');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault(); // Evita que el formulario se envíe automáticamente
+
+  if (validateEmail(emailInput.value)) {
+    // Enviar datos del formulario al servidor
+    console.log(`Correo electrónico válido: ${emailInput.value}`);
+    form.reset();
+  } else {
+    alert('Ingrese un correo electrónico válido');
+  }
+});
+
+function validateEmail(email) {
+  // Expresión regular para validar el formato de correo electrónico
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(email);
+}

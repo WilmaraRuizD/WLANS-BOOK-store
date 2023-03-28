@@ -1,17 +1,34 @@
 
-fetch('http://localhost:3023/api/libros/')
+
+//menu nav
+const doc = document;
+const menuOpen = doc.querySelector(".menu");
+const menuClose = doc.querySelector(".close");
+const overlay = doc.querySelector(".overlay");
+
+menuOpen.addEventListener("click", () => {
+    overlay.classList.add("overlay--active");
+});
+
+menuClose.addEventListener("click", () => {
+    overlay.classList.remove("overlay--active");
+});
+
+
+fetch('http://localhost:3022/api/libros/')
+
     .then(response => response.json())
     .then(data => card(data))
     .catch(error => console.error(error))
 function card(data) {
     console.log(data)
     const div = document.getElementById('cards')
-    
+
     for (var i = 1; i < 26; i++) {
         if (i % 2 == 0) {
 
             console.log(i);
-       
+
             let id = data[i].id;
             console.log(data[i].categoria_id)
             div.innerHTML += `
@@ -47,7 +64,7 @@ function card(data) {
         }
 
     }
-   
+
 }
 
 function boton(id) {
@@ -57,12 +74,12 @@ function boton(id) {
 function escucharbtn(id) {
     console.log(id);
     const tarjetas = document.getElementById('modal_container');
-    
+
     fetch('http://localhost:3022/api/libros/' + id)
         .then(response => response.json())
         .then(data => {
             data.forEach((libros) => {
-                
+
                 const {
                     nombre,
                     autor,
@@ -95,14 +112,14 @@ function escucharbtn(id) {
                         `
 
                 let closed = document.getElementById('closed');
-                
-                closed.addEventListener('click',function () {
+
+                closed.addEventListener('click', function () {
                     location.reload();
-                   
+
                 });
 
 
-                
+
 
             })
 

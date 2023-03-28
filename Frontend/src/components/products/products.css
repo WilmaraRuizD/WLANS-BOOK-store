@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
 :root {
     --whiteColor: #FAFBFC;
     --darckBlue: #1B2437;
     --blackColor: #0D0D11;
     --focusColor: #A1594C;
+
     --textfont: 'Merriweather', sans-serif;
     --tittlefont: 'Oswald', sans-serif;
 }
@@ -12,32 +13,15 @@
 * {
     margin: 0;
     padding: 0;
+    font-size: 100%;
     box-sizing: border-box;
+    font-family: var(--textfont);
 }
-
 
 body {
-
-    background: rgb(27, 36, 55);
+    width: 100vw;
+    min-width: 360px;
     background: radial-gradient(circle, rgba(27, 36, 55, 1) 0%, rgba(13, 13, 17, 1) 91%);
-    overflow-x: hidden;
-}
-
-body::-webkit-scrollbar {
-    width: 10px;
-
-}
-
-body::-webkit-scrollbar-thumb {
-    background: #1B2437;
-    border-radius: 50px;
-
-}
-
-body::-webkit-scrollbar-thumb:hover {
-    background: #A1594C;
-
-
 }
 
 /* header */
@@ -45,7 +29,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90vw;
+    width: 100vw;
     padding: 3em 2em;
     min-width: 360px;
 }
@@ -151,6 +135,13 @@ header {
     cursor: pointer;
 }
 
+@media (max-width: 420px) {
+    header .logo>img {
+        width: 120px;
+    }
+
+}
+
 @media (max-width: 1200px) {
 
     .nav__links,
@@ -166,7 +157,6 @@ header {
         font-size: 1.8em;
     }
 }
-/* /header */
 
 
 /*banner*/
@@ -192,7 +182,7 @@ header {
     height: 200px;
     margin: -300px 400px 0 40px;
     text-shadow: 2px 0px 8px rgba(0, 0, 0, 0.84);
-    font-size: 70px;
+    font-size: 50px;
     color: #fafbfd;
     font-family: 'Oswald', sans-serif;
 }
@@ -639,7 +629,7 @@ header {
 
 
 
-@media (min-width: 800px) {
+@media (min-width: 760px) {
     body {
         padding: 0 1rem;
     }
@@ -768,6 +758,84 @@ header {
     /*    visibility: hidden;*/
     }
 
+}
 
+/* Footer */
 
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+footer {
+    margin-top: 20px;
+    background-color: #0d0d11;
+    overflow: hidden;
+    width: 100%;
+}
+
+.logo>img {
+    width: 200px;
+}
+
+.footer-logo_redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-logo_redes hr {
+    width: 100%;
+}
+
+.footer-elements {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.footer-ubicacion,
+.footer-correo {
+    font-family: 'Merriweather', sans-serif;
+    color: #fafbfd;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.footer-correo p a{
+    color: #FAFBFC;
+text-decoration: none;
+}
+
+.footer-icons i {
+    padding: 10px 15px;
+}
+
+.footer-copyright {
+    background-color: #50555d;
+    font-family: 'Merriweather', sans-serif;
+    font-size: 12px;
+    ;
+    color: #fafbfd;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+@media (max-width: 650px) {
+    .footer-elements {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-ubicacion,
+    .footer-correo {
+        font-family: 'Merriweather', sans-serif;
+        color: #fafbfd;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        padding: 25px 0;
+    }
 }
