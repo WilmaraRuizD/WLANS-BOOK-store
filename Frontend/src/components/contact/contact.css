@@ -380,14 +380,16 @@ text-align: center;
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
 
-footer {
+.footer-styles {
     margin-top: 20px;
     background-color: #0d0d11;
     overflow: hidden;
+    bottom: 0;
+    left: 0;
     width: 100%;
 }
 
-.logo>img {
+.logo>.img-footer-styles {
     width: 200px;
 }
 
@@ -415,10 +417,7 @@ footer {
     display: flex;
     align-items: center;
     flex-direction: column;
-}
-.footer-correo p a{
-    color: #FAFBFC;
-text-decoration: none;
+    width: 100%;
 }
 
 .footer-icons i {
@@ -429,7 +428,7 @@ text-decoration: none;
     background-color: #50555d;
     font-family: 'Merriweather', sans-serif;
     font-size: 12px;
-    ;
+    width: 100%;
     color: #fafbfd;
     display: flex;
     justify-content: center;
