@@ -388,7 +388,7 @@ h2 {
 hr {
   border-style: dashed;
   border-width: 2px;
-  border-color: #fafbfd32
+  border-color: #fafbfd32;
 }
 
 .team {
@@ -600,82 +600,85 @@ hr {
 }
 
 /* Footer */
-
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
 
-footer {
-  margin-top: 20px;
-  background-color: #0d0d11;
-  overflow: hidden;
-  width: 100%;
+.footer-styles {
+    margin-top: 20px;
+    background-color: #0d0d11;
+    overflow: hidden;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
-.logo>img {
-  width: 200px;
+.logo>.img-footer-styles {
+    width: 200px;
 }
 
 .footer-logo_redes {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .footer-logo_redes hr {
-  width: 100%;
+    border-style: inset;
+    border-width: 1px;
+    border-color: #fafbfd;
+    width: 100%;
 }
 
 .footer-elements {
-  display: flex;
-  justify-content: space-between;
-  padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
 }
 
 .footer-ubicacion,
 .footer-correo {
-  font-family: 'Merriweather', sans-serif;
-  color: #fafbfd;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-.footer-correo p a {
-  color: #FAFBFC;
-  text-decoration: none;
-}
-
-.footer-icons i {
-  padding: 10px 15px;
-}
-
-.footer-copyright {
-  background-color: #50555d;
-  font-family: 'Merriweather', sans-serif;
-  font-size: 12px;
-  ;
-  color: #fafbfd;
-  display: flex;
-  justify-content: center;
-  padding: 15px;
-}
-
-@media (max-width: 650px) {
-  .footer-elements {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .footer-ubicacion,
-  .footer-correo {
     font-family: 'Merriweather', sans-serif;
     color: #fafbfd;
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 100%;
-    padding: 25px 0;
-  }
+}
+.footer-ubicacion h3, .footer-correo h3{
+  font-family: 'Merriweather', sans-serif;
+  font-size: 16px;
+}
+.footer-icons i {
+    padding: 10px 15px;
+}
+
+.footer-copyright {
+    background-color: #50555d;
+    font-family: 'Merriweather', sans-serif;
+    font-size: 12px;
+    width: 100%;
+    color: #fafbfd;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+@media (max-width: 650px) {
+    .footer-elements {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-ubicacion,
+    .footer-correo {
+        font-family: 'Merriweather', sans-serif;
+        color: #fafbfd;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        padding: 25px 0;
+    }
 }
