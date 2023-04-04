@@ -1,3 +1,5 @@
+url = 'http://127.0.0.1:3022/api/libros/usuario/';
+
 let form = document.querySelector('form');
 let contactoInput = document.querySelector('#contacto');
 let passwordInput = document.querySelector('#password');
@@ -5,7 +7,7 @@ let correoExiste = false;
 let telefonoExiste = false;
 
 //Obtiene los datos que se almacenan en el LocalStorage
-let datosUsuarios = JSON.parse(localStorage.getItem('usuarios'));
+/*let datosUsuarios = JSON.parse(localStorage.getItem('usuarios'));
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -59,4 +61,42 @@ form.addEventListener('submit', (event) => {
       }
     }
   }
+});*/
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  let contacto = contactoInput.value;
+  let password = passwordInput.value;
+
+
+  fetch(url + contacto)
+    .then(response => response.json())
+    .then(data => {
+      data.forEach((usuario) => {
+        const {
+          clave,
+          rol_id
+        } = usuario;
+
+        if (password === clave) {
+          if (rol_id === 2) {
+            swal('Felicidades', '¡Ingreso Exitoso!', 'success').then(
+              value => {
+                window.location.href = './../../../index.html';
+              });
+          }
+          else {
+            swal('Felicidades Administrador', '¡Ingreso Exitoso!', 'success').then(
+              value => {
+                window.location.href = '../admin/index.html';
+              });
+          }
+
+        } else {
+          swal('Error', 'Tu correo/telefono o contraseña son incorrectas', 'error');
+        }
+      })
+    })
+    .catch(error => swal('Error', 'Tu correo/telefono o contraseña son incorrectas', 'error'))
 });

@@ -62,7 +62,7 @@ function pintarId(id,e){
       console.log(id);
   modal_container.innerHTML+=`   
     <div class="modal_container"> 
-  <div class="modal__conten">
+    <div class="modal__conten">
     <h3>Titulo: ${nombre}</h3><br>
     <h4>Autor:  ${autor}</h4>
     <p>${descripcion}</p>

@@ -1,4 +1,3 @@
-
 function mostrarCategorias(){
 url1='http://127.0.0.1:3022/api/categoria/';
 
