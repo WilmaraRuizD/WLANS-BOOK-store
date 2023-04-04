@@ -1,4 +1,5 @@
-url = 'http://127.0.0.1:3022/api/libros/usuario/';
+url = 'http://127.0.0.1:3020/api/filtrarCorreo/';
+url1 = 'http://127.0.0.1:3020/api/filtrartelefono/';
 
 let form = document.querySelector('form');
 let contactoInput = document.querySelector('#contacto');
@@ -92,7 +93,6 @@ form.addEventListener('submit', (event) => {
                 window.location.href = '../admin/index.html';
               });
           }
-
         } else {
           swal('Error', 'Tu correo/telefono o contraseña son incorrectas', 'error');
         }

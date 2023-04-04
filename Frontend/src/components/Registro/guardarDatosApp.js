@@ -1,4 +1,4 @@
-let url ='http://127.0.0.1:3022/api/usuario/';
+let url ='http://127.0.0.1:3020/api/CrearUsuario';
 
 let form = document.querySelector('form');
 /*let emailInput = document.querySelector('#email');
@@ -42,6 +42,9 @@ let confirmPasswordInput = document.querySelector('#confirm-password');
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
+  let password = passwordInput.value;
+  let confirmPassword = confirmPasswordInput.value;
+
   if (password === confirmPassword) {//Verificamos la contraseña y guardamos los datos en el LocalStorage
     const enviarJson = {};
 
@@ -67,7 +70,7 @@ form.addEventListener("submit", function (event) {
     enviarJson.direccion = document.getElementById("direccion").value;
     enviarJson.clave = document.getElementById("contraseña").value;
     enviarJson.id_rol = 2;
-    console.log(enviarJson);
+    
 
     fetch(url, {
       method: "POST",
