@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./usuario.css">
+    <title>Configuración</title>
+</head>
+
+<body>
+
+    <header>
+        <a class="logo" href="../../../index.html"><img src="./../../assets/img/LogoWLANS_sinfondo.png"
+                alt="Logo WLANS Books Store"></a>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="../../../index.html">Inicio</a></li>
+                <li><a href="./src/components/about/about.html">Acerca de</a></li>
+                <li><a href="./src/components/contact/contact.html">Contáctenos</a></li>
+                <li><a href="./../Frontend/src/components/products/products.html">productos</a></li>
+                <li><a href="./src/components/Registro/registroIndex.html">Crear cuenta</a></li>
+                <li><a href="#"> <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                            fill="currentColor" viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                        </svg> </a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="./../Frontend/src/components/Login/LoginIndex.html">Iniciar sesión</a>
+        <p class="menu cta">Menu</p>
+    </header>
+
+    <div class="overlay">
+        <a class="close">&times;</a>
+        <div class="overlay__content">
+            <a href="../../../index.html">Inicio</a>
+            <a href="./src/components/about/about.html">Acerca de</a>
+            <a href="./src/components/contact/contact.html">Contáctenos</a>
+            <a href="./src/components/products/products.html">productos</a>
+            <a href="./src/components/Registro/registroIndex.html">Crear cuenta</a>
+            <a href="./src/components/Login/LoginIndex.html">Iniciar Sesión</a>
+            <a href="#"> <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                    fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                </svg> </a>
+        </div>
+    </div>
+
+    <div class="container__main__body">
+        <div class="container__body">
+            <section class="form__container">
+                <h2>Configuración</h2>
+                <input type="hidden" name="rolId" id="rolId" disabled>
+                <input type="hidden" name="userId" id="userId" disabled>
+                <div class="edit__container">
+                    <input type="button" value="Editar">
+                </div>
+                <div>
+                    <label for="Nombre">Nombre <sup>*</sup>
+                        <input class="labelcontent" type="text" name="Nombre" id="Nombre"
+                            placeholder="Ingrese su nombre" disabled>
+                    </label>
+                </div>
+                <div>
+                    <label for="Apellido">Apellido <sup>*</sup>
+                        <input class="labelcontent" type="text" name="Apellido" id="Apellido"
+                            placeholder="Ingrese su apellido" disabled>
+                    </label>
+                </div>
+                <div>
+                    <label for="Correo">Correo electrónico <sup>*</sup>
+                        <input class="labelcontent" type="email" name="Correo" id="Correo"
+                            placeholder="Ingrese su correo electrónico" disabled>
+                    </label>
+                </div>
+                <div>
+                    <label for="Telefono">Teléfono <sup>*</sup>
+                        <input class="labelcontent" type="tel" name="Telefono" id="Telefono"
+                            placeholder="Ingrese su número de teléfono" disabled>
+                    </label>
+                </div>
+                <div>
+                    <label for="TipoDocumento">Tipo de documento <sup>*</sup>
+                        <select name="TipoDocumento" class="labelcontent" type="text" name="TipoDocumento"
+                            id="TipoDocumento" placeholder="Ingrese el tipo de su documento de identidad" disabled>
+                            <option id="optionDocument"></option>
+                            <option value="C.C.">C.C.</option>
+                            <option value="C.E.">C.E.</option>
+                            <option value="T.I.">T.I.</option>
+                            <option value="PEP">PEP</option>
+                            <option value="DNI">DNI</option>
+                            <option value="PA">PA</option>
+                        </select>
+
+                    </label>
+                </div>
+                <div>
+                    <label for="IDDocumento">Numero <sup>*</sup>
+                        <input class="labelcontent" type="text" name="IDDocumento" id="IDDocumento"
+                            placeholder="Ingrese el número de su documento de identidad" disabled>
+                    </label>
+                </div>
+                <div>
+                    <label for="Departamento">Departamento <sup>*</sup>
+                        <input class="labelcontent" type="text" name="Departamento" id="Departamento"
+                            placeholder="Ingrese su departamento" disabled>
+                    </label>
+                </div>
+                <div>
+                    <label for="Ciudad">Ciudad <sup>*</sup>
+                        <input class="labelcontent" type="text" name="Ciudad" id="Ciudad"
+                            placeholder="Ingrese su ciudad" disabled>
+                    </label>
+                </div>
+                <div>
+                    <label for="Direccion">Dirección <sup>*</sup>
+                        <input class="labelcontent" type="text" name="Direccion" id="Direccion"
+                            placeholder="Ingrese su dirección" disabled>
+                    </label>
+                </div>
+                <div>
+                    <label for="Clave">Contraseña <sup>*</sup>
+                        <input id="mostrarpassword" type="checkbox" title="Mostrar contraseña" disabled>
+                        <input class="labelcontent" type="password" name="Clave" id="Clave"
+                            placeholder="Ingrese su contraseña" disabled>
+                    </label>
+                </div>
+
+                <div class="btn__container">
+                    <input id="btnguarda" type="button" value="Guardar" onclick="actualizarUsuario()" disabled>
+                    <input id="btncancela" type="button" value="Cancelar" disabled>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-elements">
+            <div class="footer-ubicacion">
+                <h3>Ubicación</h3>
+                <p>Bogotá D.C.</p>
+            </div>
+
+            <div class="footer-logo_redes">
+                <div>
+                    <a class="logo" href="./index.html"><img src="../../assets/img/LogoWLANS.png" alt="Logo WLANS Books Store"></a>
+                </div>
+                <hr>
+                <div class="footer-icons">
+                    <i class="fa-brands fa-github fa-2x" style="color: #ffffff;"></i>
+                    <i class="fa-brands fa-linkedin fa-2x" style="color: #ffffff;"></i>
+                    <i class="fa-brands fa-twitter fa-2x" style="color: #ffffff;"></i>
+                </div>
+            </div>
+    
+            <div class="footer-correo">
+                <h3>Correo</h3>
+                <p>contacto@wlansbooks.com</p>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <p>Copyright © WLANS BOOKS - All Rights Reserved</p>
+        </div>
+    </footer>
+
+
+
+    <script src="./api.js"></script>
+</body>
+
+</html>
