@@ -47,7 +47,7 @@ function card(data) {
                     Páginas: ${data[i].pagina}
                     </p>
                     <div class="buttons" id="buttons">
-                        <button class="product_button" id=${data[i].id}  type="submit" onclick="boton(${id})">
+                        <button class="product_button" id=${data[i].id}  type="submit" onclick="agregarCarrito(${id})">
                             Agregar al carrito
                         </button>
 
@@ -67,9 +67,7 @@ function card(data) {
 
 }
 
-function boton(id) {
-    
-}
+
 
 function escucharbtn(id) {
     console.log(id);
@@ -136,6 +134,55 @@ function escucharbtn(id) {
 /*window.onload = open();*/
 
 
+/*Función agregar al carrito */
+
+function agregarCarrito(id) {
+    console.log(id);
+    fetch('http://localhost:3022/api/libros/' + id)
+        .then(response => response.json())
+        .then(data => {
+            data.forEach((libros) => {
+                const nombre = data[0].nombre;
+                const foto = data[0].foto
+                libros;
+                let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+                const producto = { nombre, foto };
+                carrito.push(producto);
+                localStorage.setItem("carrito", JSON.stringify(carrito));
+                
+
+                //Función mostrar check
+                
+                //Función mostrar check
+                
+                alert("Producto agregado correctamente")
+                if(confirm){
+                    mostrar();
+                   /* document.addEventListener("DOMContentLoaded",function mostrar() {
+                    
+                        const click = document.querySelector('btn-carrito');
+                        click.style.display = 'block';
+                    })*/
+                }
+
+
+
+            }
+
+            )
+        })
+
+
+}
+
+
+function mostrar(){
+    alert('Hola funciono')
+    const click = document.querySelector('btn-carrito');
+    click.style.display = 'none';
+    
+    
+}
 
 
 
