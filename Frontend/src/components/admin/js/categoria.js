@@ -1,6 +1,7 @@
 
 function mostrarCategorias(){
-url1='http://127.0.0.1:3022/api/categoria/';
+url1='http://127.0.0.1:3020/api/categorias'; //ver categoria 
+ 
 
   fetch(url1)
   .then(response=>response.json())
@@ -36,7 +37,7 @@ url1='http://127.0.0.1:3022/api/categoria/';
 }
 
     function clasificarPorCategoria(id){
-      url1='http://127.0.0.1:3022/api/libros/filtraCategoria/'+id;
+      url1='http://127.0.0.1:3020/api/filtrarCategoria/'+id;
     
       fetch(url1)
       .then(response=>response.json())
@@ -82,7 +83,7 @@ url1='http://127.0.0.1:3022/api/categoria/';
       console.log(id);
       console.log(url+id);
       
-      fetch(url +id, {
+      fetch(url2 +id, {
         method: "DELETE",
       })
       .then((res) => res.json())
