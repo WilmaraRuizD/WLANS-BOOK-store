@@ -1,11 +1,14 @@
-url = 'http://127.0.0.1:3020/api/filtrarCorreo/';
-url1 = 'http://127.0.0.1:3020/api/filtrartelefono/';
+url = 'http://127.0.0.1:3022/api/filtrarCorreo/';
+url1 = 'http://127.0.0.1:3022/api/filtrartelefono/';
 
 let form = document.querySelector('form');
 let contactoInput = document.querySelector('#contacto');
 let passwordInput = document.querySelector('#password');
-let correoExiste = false;
-let telefonoExiste = false;
+//const pattern = /^[\w.%+-]+@[\w.-]+\.[\w]{2,}$|^\d+$/;
+const phoneRegex = /^\d+$/;
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+//let correoExiste = false;
+//let telefonoExiste = false;
 
 //Obtiene los datos que se almacenan en el LocalStorage
 /*let datosUsuarios = JSON.parse(localStorage.getItem('usuarios'));
@@ -68,35 +71,78 @@ form.addEventListener('submit', (event) => {
   event.preventDefault();
 
   let contacto = contactoInput.value;
-  let password = passwordInput.value;
+  let password = passwordInput.textContent;
 
-
-  fetch(url + contacto)
-    .then(response => response.json())
-    .then(data => {
-      data.forEach((usuario) => {
-        const {
-          clave,
-          rol_id
-        } = usuario;
-
-        if (password === clave) {
-          if (rol_id === 2) {
-            swal('Felicidades', '¡Ingreso Exitoso!', 'success').then(
-              value => {
-                window.location.href = './../../../index.html';
-              });
+  // Verifica si el valor ingresado coincide con el patrón de correo electrónico
+  if (emailRegex.test(contacto)) {
+    console.log("si");
+    fetch(url+contacto)
+      .then(response => response.json())
+      .then(data => {
+        data.forEach((usuario) => {
+          const {
+            id,
+            clave,
+            rol_id
+          } = usuario;
+          if (clave===password) {
+            
+            if (rol_id === 2) {
+              swal('Felicidades', '¡Ingreso Exitoso!', 'success').then(
+                value => {
+                  window.location.href = './../../../index.html';
+                });
+            }
+            else {
+              swal('Felicidades Administrador', '¡Ingreso Exitoso!', 'success').then(
+                value => {
+                  window.location.href = '../admin/index.html';
+                });
+            }
+          } else {
+            console.log("si si");
+            swal('Error', 'Tu correo/telefono o contraseña son incorrectas :)', 'error');
           }
-          else {
-            swal('Felicidades Administrador', '¡Ingreso Exitoso!', 'success').then(
-              value => {
-                window.location.href = '../admin/index.html';
-              });
-          }
-        } else {
-          swal('Error', 'Tu correo/telefono o contraseña son incorrectas', 'error');
-        }
+        })
       })
-    })
-    .catch(error => swal('Error', 'Tu correo/telefono o contraseña son incorrectas', 'error'))
+      .catch(error => swal('Error', 'Tu correo/telefono o contraseña son incorrectas :(', 'error'));
+  }
+  // Verifica si el valor ingresado coincide con el patrón de número telefónico
+  else
+    if (phoneRegex.test(contacto)) {
+      fetch(url1 + contacto)
+        .then(response => response.json())
+        .then(data => {
+          data.forEach((usuario) => {
+            const {
+              id,
+              clave,
+              rol_id
+            } = usuario;
+
+            if (password === clave) {
+              if (rol_id === 2) {
+                swal('Felicidades', '¡Ingreso Exitoso!', 'success').then(
+                  value => {
+                    window.location.href = './../../../index.html';
+                  });
+              }
+              else {
+                swal('Felicidades Administrador', '¡Ingreso Exitoso!', 'success').then(
+                  value => {
+                    window.location.href = '../admin/index.html';
+                  });
+              }
+            } else {
+              swal('Error', 'Tu correo/telefono o contraseña son incorrectas', 'error');
+            }
+          })
+        })
+        .catch(error => swal('Error', 'Tu correo/telefono o contraseña son incorrectas', 'error'));
+    }
+    // Si no coincide con ninguno de los patrones anteriores, muestra un mensaje de error
+    else {
+      swal('Error', 'Correo o numero telefonico incorrecto', 'error');
+    }
+
 });
