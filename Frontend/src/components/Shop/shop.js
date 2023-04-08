@@ -8,13 +8,13 @@ if(document.readyState == 'loading'){
 
 function ready(){
     
-    //Eliminar del carrito
-    let botonesEliminarItem = document.getElementsByClassName('btn-eliminar');
-    for(let i=0;i<botonesEliminarItem.length; i++){
-        let button = botonesEliminarItem[i];
-        button.addEventListener('click',eliminarItemCarrito);
-    }
-
+     //Eliminar del carrito
+     let botonesEliminarItem = document.getElementsByClassName('btn-eliminar');
+     for(let i=0;i<botonesEliminarItem.length; i++){
+         let button = botonesEliminarItem[i];
+         button.addEventListener('click',eliminarItemCarrito);
+     }
+ 
     //Sumar cantidad
     let botonesSumarCantidad = document.getElementsByClassName('sumar-cantidad');
     for(let i=0;i<botonesSumarCantidad.length; i++){
@@ -29,27 +29,29 @@ function ready(){
         button.addEventListener('click',restarCantidad);
     }
 
-    //Agregar al carrito
-    let botonesAgregarAlCarrito = document.getElementsByClassName('boton-item');
-    for(let i=0; i<botonesAgregarAlCarrito.length;i++){
-        let button = botonesAgregarAlCarrito[i];
-        button.addEventListener('click', agregarAlCarritoClicked);
-    }
+   
 
     //Agregamos funcionalidad al botón comprar
     document.getElementsByClassName('btn-pagar')[0].addEventListener('click',pagarClicked)
 }
 //Hacer pedido
 function pagarClicked(){
-    alert("Solicitud de compra recibida");
+        const alert = document.getElementById('alert');
+        alert.innerHTML+=`<div class="modal_container">
+        <div class="modal__conten">
+          <h3>Solicitud de compra recibida con éxito.</h3>
+          <button class="modal__closed" id="closed">X</button>
+          </div>
+        </div>
+        `
+        let closed=document.getElementById('closed');
+        
+        closed.addEventListener('click',function(){
+           location.reload();
+        });
 
-    //Vaciar carrito
-    let carritoItems = document.getElementsByClassName('carrito-items')[0];
-    while (carritoItems.hasChildNodes()){
-        carritoItems.removeChild(carritoItems.firstChild)
-    }
     actualizarTotalCarrito();
-    ocultarCarrito();
+
 }
 //Funciòn que controla el boton clickeado de agregar al carrito
 function agregarAlCarritoClicked(event){
