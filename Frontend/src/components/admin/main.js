@@ -8,9 +8,9 @@ let por_categoria=document.getElementById("por_categoria");
 
 /*GET mostrar todos los libros */
 
- function ver_libros(){
+function ver_libros() {
 
-  por_categoria.style.visibility ="hidden";
+  por_categoria.style.visibility = "hidden";
   verLibros.style.visibility = "visible";
   /* metodo fetch trae libros por Get */
   fetch(url)
@@ -18,14 +18,14 @@ let por_categoria=document.getElementById("por_categoria");
   .then(data=>mostrarData(data))
                             
   /* pinta todos los libros en el Dom */
-  const mostrarData=(data)=>{
+  const mostrarData = (data) => {
     console.log(data)
-    let body=""
-    for(var i=0;i<data.length ;i++){
-      let id=data[i].id
+    let body = ""
+    for (var i = 0; i < data.length; i++) {
+      let id = data[i].id
       console.log(id)
-    /* tabla libros */
-      body+=`
+      /* tabla libros */
+      body += `
       <tr>
       <th>${data[i].id}</th>
       <th>${data[i].nombre}</th>
@@ -36,15 +36,15 @@ let por_categoria=document.getElementById("por_categoria");
     </tr>
       `
     }
-    document.getElementById('data1').innerHTML=body;
+    document.getElementById('data1').innerHTML = body;
   }
 
 }
 
 /* modal trae libros por id  */
-let modal_container=document.getElementById("modal_container");
+let modal_container = document.getElementById("modal_container");
 
-function pintarId(id,e){
+function pintarId(id, e) {
   console.log(id)
   fetch(url1+id)
   .then(response=>response.json())
@@ -72,22 +72,22 @@ function pintarId(id,e){
   </&div>
 </div> 
 `
-/* cierra el modal  */
-let closed=document.getElementById('closed');
+        /* cierra el modal  */
+        let closed = document.getElementById('closed');
 
-closed.addEventListener('click',function(){
- location.reload();
-});
+        closed.addEventListener('click', function () {
+          location.reload();
+        });
 
 
- e.preventdefault();
-})
-}) 
-  .catch(error=>console.log(error));
+        e.preventdefault();
+      })
+    })
+    .catch(error => console.log(error));
 
 }
 /* abre en ventana emergente el archivo crearLibros.html */
-function crearLibro(){
+function crearLibro() {
   window.open("./static/crearLibro.html");
 }
 
@@ -100,14 +100,14 @@ capturaLibros.addEventListener("submit", function (e) {
 
   const enviarJson = {};
 
-     enviarJson.nombre = document.getElementById("nombre").value;
-     enviarJson.autor = document.getElementById("autor").value;
-     enviarJson.editorial= document.getElementById("editorial").value;
-     enviarJson.ano_de_publicacion = document.getElementById("ano_de_publicacion").value;
-     enviarJson.pagina = document.getElementById("pagina").value;
-     enviarJson.foto = document.getElementById("foto").value;
-     enviarJson.categoria_id= document.getElementById("categoria_id").value;
-     console.log(enviarJson); 
+  enviarJson.nombre = document.getElementById("nombre").value;
+  enviarJson.autor = document.getElementById("autor").value;
+  enviarJson.editorial = document.getElementById("editorial").value;
+  enviarJson.ano_de_publicacion = document.getElementById("ano_de_publicacion").value;
+  enviarJson.pagina = document.getElementById("pagina").value;
+  enviarJson.foto = document.getElementById("foto").value;
+  enviarJson.categoria_id = document.getElementById("categoria_id").value;
+  console.log(enviarJson);
 
   e.preventDefault();
 
@@ -118,9 +118,8 @@ capturaLibros.addEventListener("submit", function (e) {
     },
     body: JSON.stringify(enviarJson),
   })
-  .then((res) => res.json())
-  .then((data) => {
-    console.log(data);
-  }); 
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+    });
 })
-
