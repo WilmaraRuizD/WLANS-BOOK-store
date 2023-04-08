@@ -282,3 +282,4 @@ function actualizarTotalCarrito(){
 function actualizar(){
     location.reload();
 }
+
