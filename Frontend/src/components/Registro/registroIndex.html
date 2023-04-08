@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="registroStyles.css">
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://kit.fontawesome.com/02c80648f9.js" crossorigin="anonymous"></script>
   <title>Crea Tu Cuenta</title>
 </head>
 
@@ -19,23 +20,22 @@
     <section class="section-styles">
       <div class="title-styles">
         <a href="../../../index.html">
-          <img class="arrowimg" src="../../assets/img/—Pngtree—vector left arrow icon_4231912.png" alt="">
-          Cancelar
+          <i class="fa-solid fa-arrow-left fa-xl" style="color: #fafbfd;"></i>
         </a>
         <h3>Crea Tu Cuenta</h3>
       </div>
 
-      <form class="form-styles" action="https://formspree.io/f/xgebzvjz" method="POST">
+      <form class="form-styles">
         <div class="form-sections-styles">
           <div>
             <label>Tu Nombre</label>
             <br>
-            <input type="text" placeholder="Tu nombre..." required>
+            <input type="text"  id="nombre" placeholder="Tu nombre..." required>
           </div>
           <div>
             <label>Tu Apellido</label>
             <br>
-            <input type="text" placeholder="Tu apellido..." required>
+            <input type="text" id="apellido" placeholder="Tu apellido..." required>
           </div>
         </div>
 
@@ -44,7 +44,7 @@
           <div>
             <label>Tu Correo Electrónico</label>
             <br>
-            <input type="email" id="email" placeholder="Tu correo..." required>
+            <input type="email" id="correo" placeholder="Tu correo..." required>
           </div>
           <div>
             <label>Tu Numero Telefónico</label>
@@ -57,17 +57,20 @@
           <div>
             <label>Tipo de Documento</label>
             <br>
-            <select>
+            <select id="tipo_documento">
               <option>Seleccione el Documento</option>
-              <option value="Cedula de Ciudadania">Cedula de Ciudadania</option>
-              <option value="Cedula de Extranjeria">Cedula de Extranjeria</option>
-              <option value="Pasaporte">Pasaporte</option>
+              <option value="C.C">C.C</option>
+              <option value="T.I">T.I</option>
+              <option value="C.E">C.E</option>
+              <option value="PEP">PEP</option>
+              <option value="DNI">DNI</option>
+              <option value="PA">PA</option>
             </select>
           </div>
           <div>
             <label>Tu Numero de Identidad</label>
             <br>
-            <input type="text" placeholder="Tu documento..." required>
+            <input type="text" id="numero_identidad" placeholder="Tu documento..." required>
           </div>
         </div>
 
@@ -91,7 +94,7 @@
         <div class="direction-styles">
           <label>Tu Dirección de Residencia</label>
           <br>
-          <input type="text" placeholder="Tu dirección..." required>
+          <input type="text" id="direccion" placeholder="Tu dirección..." required>
         </div>
 
         <div class="form-sections-styles">

@@ -1,5 +1,3 @@
-
-
 //menu nav
 const doc = document;
 const menuOpen = doc.querySelector(".menu");
@@ -15,22 +13,23 @@ menuClose.addEventListener("click", () => {
 });
 
 
-fetch('http://localhost:3022/api/libros/')
+fetch('http://127.0.0.1:3020/api/libros')
 
     .then(response => response.json())
     .then(data => card(data))
-    .catch(error => console.error(error))
+  
 function card(data) {
     console.log(data)
     const div = document.getElementById('cards')
 
-    for (var i = 1; i < 26; i++) {
+    for (var i = 1; i < 25; i++) {
         if (i % 2 == 0) {
 
-            console.log(i);
-
+            console.log(data);
+         
             let id = data[i].id;
-            console.log(data[i].categoria_id)
+
+           
             div.innerHTML += `
         
             <article class="product_item" id="${data[i].categoria_id}">
@@ -47,7 +46,7 @@ function card(data) {
                     Páginas: ${data[i].pagina}
                     </p>
                     <div class="buttons" id="buttons">
-                        <button class="product_button" id=${data[i].id}  type="submit" onclick="boton(${id})">
+                        <button class="product_button" id=${data[i].id}  type="submit" onclick="agregarCarrito(${id})">
                             Agregar al carrito
                         </button>
 
@@ -67,41 +66,27 @@ function card(data) {
 
 }
 
-function boton(id) {
-    
-}
-
 function escucharbtn(id) {
     console.log(id);
     const tarjetas = document.getElementById('modal_container');
 
-    fetch('http://localhost:3022/api/libros/' + id)
+    fetch('http://127.0.0.1:3020/api/libros/' + id)
         .then(response => response.json())
         .then(data => {
-            data.forEach((libros) => {
-
-                const {
-                    nombre,
-                    autor,
-                    editorial,
-                    ano_de_publicacion,
-                    descripcion,
-                    pagina,
-                    foto
-                } =
-                    libros;
+           
+    Object.keys(data).forEach((libros) => {
 
                 console.log(id);
                 tarjetas.innerHTML += `    
                 <div class="modal_container">
                     <div class="modal__conten">
-                        <h3 class="title_modal"> ${nombre}</h3><br>
-                        <h4> ${autor}</h4>
-                        <p>${descripcion}</p>
+                        <h3 class="title_modal"> ${data.nombre}</h3><br>
+                        <h4> ${data.autor}</h4>
+                        <p>${data.descripcion}</p>
                         <div class="modal_img"> 
                         
-                        <p class="modal_det">Editorial: ${editorial}</p>
-                        <p class="modal_det">Año de publicación: ${ano_de_publicacion}</p>
+                        <p class="modal_det">Editorial: ${data.editorial}</p>
+                        <p class="modal_det">Año de publicación: ${data.ano_de_publicacion}</p>
                         
                         
                         <button class="modal__closed" id="closed">
@@ -114,44 +99,48 @@ function escucharbtn(id) {
                 let closed = document.getElementById('closed');
 
                 closed.addEventListener('click', function () {
+                    alert("esto es prueba")
                     location.reload();
 
                 });
-
-
-
-
             })
-
-
-        }
-        )
-
-
+})
 }
 
-/*
+/*Función agregar al carrito */
 
+function agregarCarrito(id) {
+    console.log(id);
+    fetch('http://localhost:3020/api/libros/' + id)
+        .then(response => response.json())
+        .then(data => {
+            Object.keys(data).forEach((libros) => {
+                console.log(data)
+                console.log(data.nombre)
+                let nombre=data.nombre;
+                let foto=data.foto;
 
-/*window.onload = open();*/
+                let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+                const producto = { nombre, foto };
+                carrito.push(producto);
+                localStorage.setItem("carrito", JSON.stringify(carrito))
+            
+                //Función mostrar check
+                
+                alert("Producto agregado correctamente")
+                if(confirm){
+                    actualizar()
+                    mostrar();
+                   /* document.addEventListener("DOMContentLoaded",function mostrar() {
+                    
+                        const click = document.querySelector('btn-carrito');
+                        click.style.display = 'block';
+                    })*/
+                }
 
+            }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            )
+        })
+}
 

@@ -279,7 +279,7 @@ header {
     justify-content: center;
     text-align: center;
     margin: 10px;
-    
+
     box-shadow: 16px 18px 29px 10px rgba(13, 13, 17, 0.637);
     padding: 10px;
     color: #fafbfd;
@@ -340,7 +340,7 @@ header {
 .product_item:hover {
     transform: scaleX(1.10);
     box-shadow: 3px 1px 15px 15px rgba(55, 66, 91, 0.75);
-    border-radius:20px;
+    border-radius: 20px;
     background: #1B2437;
     background: linear-gradient(to right, #1B2437 0%, #0F3A58 50%, #1B2437 100%);
 }
@@ -405,6 +405,7 @@ header {
     visibility: hidden;
     display: none;
 }
+
 /*
 .over_lay {
 
@@ -498,7 +499,7 @@ header {
     top: 0;
     left: 0;
     bottom: 20px;
-    
+
 }
 
 .modal__conten {
@@ -508,26 +509,28 @@ header {
     position: relative;
     border-radius: 10px;
     box-sizing: border-box;
-    color:#fafbfd;
+    color: #fafbfd;
     background: radial-gradient(ellipse at center, #1B2437 0%, #092437 88%, #1B2437 100%);
     display: block;
     justify-content: center;
     text-align: center;
     box-shadow: 1px 3px 16px 7px #a1594c4c;
 }
-.modal__conten p{
+
+.modal__conten p {
     margin: 20px;
     font-size: 12px;
     font-family: 'Merriweather', sans-serif;
     justify-content: center;
     align-items: center;
 }
-.modal_det{
+
+.modal_det {
     justify-content: center;
     left: 100px;
 }
 
-.modal__conten h4{
+.modal__conten h4 {
     font-family: 'Merriweather', sans-serif;
     font-size: 18px;
 
@@ -537,25 +540,25 @@ header {
     position: absolute;
     top: 5px;
     right: 3px;
-    background:none;
+    background: none;
     border: none;
     outline: none;
     font-size: 20px;
     cursor: pointer;
     color: #fafbfd;
     text-align: right;
-   
+
 }
 
 .modal_img {
     display: flex;
-    background-color:#1b2437;
+    background-color: #1b2437;
 }
 
 .modal_img p {
 
-    background-color:none;
-    border:black 1px solid;
+    background-color: none;
+    border: black 1px solid;
     border-radius: 10px;
     margin-left: 50px;
     padding-top: 6px;
@@ -568,17 +571,17 @@ header {
     margin: 5px;
 }*/
 
-.title_modal{
-    font-family:'Oswald', sans-serif;
+.title_modal {
+    font-family: 'Oswald', sans-serif;
     color: #fafbfd;
     font-size: 26px;
     padding: 10px;
 }
 
-.close_modal{
-    
+.close_modal {
+
     display: flex;
-    position:absolute;
+    position: absolute;
     right: 230px;
     top: 160px;
 }
@@ -695,13 +698,13 @@ header {
         justify-content: center;
         text-align: center;
         margin: 10px;
-       /* box-shadow: 3px 1px 15px 15px rgba(27,36,55,0.74);*/
+        /* box-shadow: 3px 1px 15px 15px rgba(27,36,55,0.74);*/
         padding: 30px;
         color: #fafbfd;
         border: none;
         border-radius: 10px;
         box-sizing: border-box;
-/*16px 18px 29px 10px rgba(13, 13, 17, 0.637)*/
+        /*16px 18px 29px 10px rgba(13, 13, 17, 0.637)*/
     }
 
     .detalles {
@@ -728,12 +731,13 @@ header {
         box-sizing: border-box;
     }
 
-    .close_modal{
-        display:block;
+    .close_modal {
+        display: block;
         position: absolute;
         right: 440px;
         top: 160px;
     }
+
     .modal__conten {
         max-width: 500px;
         max-height: 500px;
@@ -742,10 +746,11 @@ header {
         display: block;
         justify-content: center;
         text-align: center;
-        
+
     }
+
     .modal_container {
-       
+
         width: 100vw;
         height: 100vh;
         display: flex;
@@ -754,8 +759,8 @@ header {
         position: fixed;
         top: 0;
         left: 0;
-        
-    /*    visibility: hidden;*/
+
+        /*    visibility: hidden;*/
     }
 
 }
@@ -766,14 +771,16 @@ header {
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
 
-footer {
+.footer-styles {
     margin-top: 20px;
     background-color: #0d0d11;
     overflow: hidden;
+    bottom: 0;
+    left: 0;
     width: 100%;
 }
 
-.logo>img {
+.logo>.img-footer-styles {
     width: 200px;
 }
 
@@ -801,10 +808,7 @@ footer {
     display: flex;
     align-items: center;
     flex-direction: column;
-}
-.footer-correo p a{
-    color: #FAFBFC;
-text-decoration: none;
+    width: 100%;
 }
 
 .footer-icons i {
@@ -815,7 +819,7 @@ text-decoration: none;
     background-color: #50555d;
     font-family: 'Merriweather', sans-serif;
     font-size: 12px;
-    ;
+    width: 100%;
     color: #fafbfd;
     display: flex;
     justify-content: center;
