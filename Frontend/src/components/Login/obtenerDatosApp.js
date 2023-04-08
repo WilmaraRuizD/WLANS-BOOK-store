@@ -71,22 +71,24 @@ form.addEventListener('submit', (event) => {
   event.preventDefault();
 
   let contacto = contactoInput.value;
-  let password = passwordInput.textContent;
+  let password = passwordInput.value;
+  console.log(typeof (contacto));
+  console.log(typeof (password));
 
   // Verifica si el valor ingresado coincide con el patrón de correo electrónico
   if (emailRegex.test(contacto)) {
     console.log("si");
-    fetch(url+contacto)
+    fetch(url + contacto)
       .then(response => response.json())
-      .then(data => {
+      /*.then(data => {
         data.forEach((usuario) => {
           const {
             id,
             clave,
             rol_id
           } = usuario;
-          if (clave===password) {
-            
+          console.log("si si");
+          if (clave === password) {
             if (rol_id === 2) {
               swal('Felicidades', '¡Ingreso Exitoso!', 'success').then(
                 value => {
@@ -100,15 +102,36 @@ form.addEventListener('submit', (event) => {
                 });
             }
           } else {
-            console.log("si si");
+
             swal('Error', 'Tu correo/telefono o contraseña son incorrectas :)', 'error');
           }
         })
+      })*/
+      .then(data => {
+        Object.keys(data).forEach((usuario) => {
+          console.log(data)
+          if (data.clave === password) {
+            console.log("la clave coincide");
+            if (data.rolId === 2) {
+              console.log("Ingreso usuario");
+              swal('Felicidades', '¡Ingreso Exitoso!', 'success').then(
+                value => {
+                  window.location.href = './../../../index.html';
+                });
+            }
+            else {
+              swal('Felicidades Administrador', '¡Ingreso Exitoso!', 'success').then(
+                value => {
+                  window.location.href = '../admin/index.html';
+                });
+            }
+          }
+        })
       })
-      .catch(error => swal('Error', 'Tu correo/telefono o contraseña son incorrectas :(', 'error'));
+      .catch(error => swal('Error', 'Tu cuenta no existe. Por favor cree un perfil para continuar', 'error'));
   }
   // Verifica si el valor ingresado coincide con el patrón de número telefónico
-  else
+  /*else
     if (phoneRegex.test(contacto)) {
       fetch(url1 + contacto)
         .then(response => response.json())
@@ -139,10 +162,9 @@ form.addEventListener('submit', (event) => {
           })
         })
         .catch(error => swal('Error', 'Tu correo/telefono o contraseña son incorrectas', 'error'));
-    }
-    // Si no coincide con ninguno de los patrones anteriores, muestra un mensaje de error
-    else {
-      swal('Error', 'Correo o numero telefonico incorrecto', 'error');
-    }
-
+    }*/
+  // Si no coincide con ninguno de los patrones anteriores, muestra un mensaje de error
+  else {
+    swal('Error', 'Correo o numero telefonico incorrecto', 'error');
+  }
 });

@@ -85,14 +85,11 @@ form.addEventListener("submit", function (event) {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
-      })
-      .then(
         swal('Felicidades', 'Su usuario ha sido registrado.', 'success').then(
           value => {
             window.location.href = '../Login/LoginIndex.html';
           })
-      )
+      })
       .catch(error => swal('Error', 'Error en el registro', 'error'));
   } else {
     swal('Error', 'Las contraseñas no coinciden.', 'error');
