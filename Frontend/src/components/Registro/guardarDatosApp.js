@@ -1,4 +1,4 @@
-let url ='http://127.0.0.1:3020/api/CrearUsuario';
+let url = 'http://127.0.0.1:3022/api/CrearUsuario/';
 
 let form = document.querySelector('form');
 /*let emailInput = document.querySelector('#email');
@@ -42,37 +42,42 @@ let confirmPasswordInput = document.querySelector('#confirm-password');
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
+  const enviarJson = {};
   let password = passwordInput.value;
   let confirmPassword = confirmPasswordInput.value;
 
-  if (password === confirmPassword) {//Verificamos la contraseña y guardamos los datos en el LocalStorage
-    const enviarJson = {};
+  if (password === confirmPassword) {//Verificamos la contraseña y guardamos los datos en un json
+  
+    enviarJson.nombre = document.getElementById("nombre").value;
 
-    enviarJson.nombre = document.getElementById("nombre").textContent;
-    enviarJson.apellido = document.getElementById("apellido").textContent;
+    enviarJson.apellido = document.getElementById("apellido").value;
     enviarJson.correo = document.getElementById("correo").value;
-    enviarJson.telefono = document.getElementById("telefono").value;
+    enviarJson.telefono = Number(document.getElementById("telefono").value);
 
     //enviarJson.tipo_documento = document.getElementById("tipo_documento").value;
     let selectTipoDocumento = document.getElementById('tipo_documento');
-    enviarJson.tipo_documento = selectTipoDocumento.textContent;
+    let documentoSelected = selectTipoDocumento.selectedOptions[0];
+    enviarJson.tipo_documento = documentoSelected.value;
 
-    enviarJson.numero_identidad = document.getElementById("numero_identidad").value;
+    enviarJson.numero_identidad = Number(document.getElementById("numero_identidad").value);
 
     //enviarJson.departamento = document.getElementById("departamento").value;
     let selectDepartamento = document.getElementById('departamento');
-    enviarJson.departamento = selectDepartamento.textContent;
+    let departamentoSelected = selectDepartamento.selectedOptions[0];
+    enviarJson.departamento = departamentoSelected.textContent;
 
     //enviarJson.ciudad = document.getElementById("ciudad").value;
-    let selectCiudad = document.getElementById('departamento');
-    enviarJson.ciudad = selectCiudad.textContent;
+    let selectCiudad = document.getElementById('ciudad');
+    let ciudadSelected = selectCiudad.selectedOptions[0];
+    enviarJson.ciudad = ciudadSelected.textContent;
 
     enviarJson.direccion = document.getElementById("direccion").value;
-    enviarJson.clave = document.getElementById("contraseña").value;
+    enviarJson.clave = document.getElementById("password").value;
     enviarJson.id_rol = 2;
-    
 
-    fetch(url, {
+    console.log(enviarJson);
+
+    fetch('http://127.0.0.1:3022/api/CrearUsuario', {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -83,13 +88,14 @@ form.addEventListener("submit", function (event) {
       .then((data) => {
         console.log(data);
       })
-    swal('Felicidades', 'Su usuario ha sido registrado.', 'success').then(
-      value => {
-        window.location.href = '../Login/LoginIndex.html';
-      });
-
+      /*.then(
+        swal('Felicidades', 'Su usuario ha sido registrado.', 'success').then(
+          value => {
+            window.location.href = '../Login/LoginIndex.html';
+          })
+      )*/
+      .catch(error => swal('Error', 'Error en el registro', 'error'));
   } else {
     swal('Error', 'Las contraseñas no coinciden.', 'error');
   }
-
 });
