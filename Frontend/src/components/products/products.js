@@ -131,13 +131,13 @@ function agregarCarrito(id) {
                 
                 alert("Producto agregado correctamente")
                 if(confirm){
-                    actualizar()
-                    mostrar();
-                   /* document.addEventListener("DOMContentLoaded",function mostrar() {
+                   actualizar()
+                    mostrar()
+                    document.addEventListener("DOMContentLoaded",function mostrar() {
                     
-                        const click = document.querySelector('btn-carrito');
+                        const click = document.querySelector('#carritoClick');
                         click.style.display = 'block';
-                    })*/
+                    })
                 }
 
             }
