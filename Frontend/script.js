@@ -93,13 +93,5 @@ menuClose.addEventListener("click", () => {
   overlay.classList.remove("overlay--active");
 });
 
-alert("Producto agregado correctamente")
-                if(confirm){
-                    document.addEventListener("DOMContentLoaded",function mostrar() {
-                    
-                        const click = document.querySelector('.btn-carrito');
-                        click.style.display = 'block';
-                    })
-                }
 
 
