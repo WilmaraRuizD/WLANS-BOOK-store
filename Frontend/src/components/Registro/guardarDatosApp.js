@@ -1,4 +1,4 @@
-let url = 'http://127.0.0.1:3022/api/CrearUsuario';
+let url = 'http://127.0.0.1:3020/api/CrearUsuario';
 
 let form = document.querySelector('form');
 /*let emailInput = document.querySelector('#email');
