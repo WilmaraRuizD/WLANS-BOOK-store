@@ -157,28 +157,21 @@ header {
         font-size: 1.8em;
     }
 }
-
-.menu_desplegable ul{
-    position: absolute;
-    list-style: none;
-    display: none;
+.submenu li{
+margin: 5px 0;
+padding: 0;
 }
-.menu_desplegable ul li{
-    display: block;
-    margin: 0 0 0 0px;
+.submenu{
+    cursor: pointer;
+    position: relative;
+    visibility: hidden;
 }
-.menu_desplegable ul li a {
 
+.submenuActivo{
+    visibility: visible;
     
-    font-family: var(--textfont);
-    font-size: 14px;
 }
-.menu_desplegable:hover > ul    {
-    display: block;
-}
-
-#nombreUsuario{
-    color: #fafbfd;
-    font-size: 16px;
-    font-family: var(--tittlefont);
+.listA{
+    list-style: none;
+    text-align: center;
 }
