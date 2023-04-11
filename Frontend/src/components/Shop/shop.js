@@ -283,3 +283,26 @@ function actualizar(){
     location.reload();
 }
 
+
+/*BOTON PAGAR*/
+
+function pagarClicked() {
+    const alert = document.getElementById('alert');
+    alert.innerHTML += `<div class="modal_container">
+    <div class="modal__conten">
+        <h3>Solicitud de compra recibida con éxito.</h3>
+        <button class="modal__closed" id="closed">X</button>
+        </div>
+    </div>
+    `
+    let closed = document.getElementById('closed');
+
+    closed.addEventListener('click', function () {
+        location.reload();
+    });
+
+    actualizarTotalCarrito();
+}
+document.getElementsByClassName('btn-pagar')[0].addEventListener('click', pagarClicked);
+
+
