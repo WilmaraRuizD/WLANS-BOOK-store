@@ -13,7 +13,7 @@ menuClose.addEventListener("click", () => {
 });
 
 
-fetch('http://localhost:3023/api/libros/')
+fetch('http://localhost:3020/api/libros')
 
     .then(response => response.json())
     .then(data => card(data))
@@ -70,7 +70,7 @@ function escucharbtn(id) {
     console.log(id);
     const tarjetas = document.getElementById('modal_container');
 
-    fetch('http://localhost:3023/api/libros/' + id)
+    fetch('http://localhost:3020/api/libros/' + id)
         .then(response => response.json())
         .then(data => {
            
@@ -111,14 +111,14 @@ function escucharbtn(id) {
 
 function agregarCarrito(id) {
     console.log(id);
-    fetch('http://localhost:3023/api/libros/' + id)
+    fetch('http://localhost:3020/api/libros/' + id)
         .then(response => response.json())
         .then(data => {
             Object.keys(data).forEach((libros) => {
                 console.log(data)
                 console.log(data.nombre)
-                const nombre = data[0].nombre;
-                const foto = data[0].foto
+                let nombre = data.nombre;
+                let foto = data.foto;
                 libros;
                
 
