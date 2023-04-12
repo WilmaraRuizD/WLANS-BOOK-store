@@ -53,9 +53,14 @@ form.addEventListener('submit', (event) => {
       .then(data => {
         Object.keys(data).forEach((usuario) => {
           console.log(data)
+          console.log(data.id)
+          const idUsuario=localStorage.setItem(data.id, idUsuario);
+          console.log(idUsuario);
           if (data.clave === password) {
             console.log("la clave coincide");
             if (data.rolId === 2) {
+
+
               console.log("Ingreso usuario");
               swal('Felicidades', '¡Ingreso Exitoso!', 'success').then(
                 value => {
