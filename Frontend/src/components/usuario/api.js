@@ -13,7 +13,7 @@ menuClose.addEventListener("click", () => {
 });
 
 // Llamada del id del usuario
-const loginId = 1;
+const loginId = localStorage.getItem(idUsuario) //nombre de la variable en localstorage
 
 // Llamada de la API
 const url = 'http://localhost:8080/api/';
@@ -49,33 +49,33 @@ function findUser() {
             const api = respuesta;
 
             userIdInput.value = api.id;
-            nombreInput.value = api.name;
-            apellidoInput.value = api.lastName;
-            correoInput.value = api.email;
-            telefonoInput.value = api.phone;
-            optionDocument.value = api.documentType;
-            idDocumentoInput.value = api.documentId;
-            departamentoInput.value = api.state;
-            ciudadInput.value = api.city;
-            direccionInput.value = api.address;
-            claveInput.value = api.password;
-            rolIdInput.value = api.rolUser;
+            nombreInput.value = api.nombre;
+            apellidoInput.value = api.apellido;
+            correoInput.value = api.correo;
+            telefonoInput.value = api.telefono;
+            optionDocument.value = api.tipoDocumento;
+            idDocumentoInput.value = api.numeroIdentidad;
+            departamentoInput.value = api.departamento;
+            ciudadInput.value = api.ciudad;
+            direccionInput.value = api.direccion;
+            claveInput.value = api.clave;
+            rolIdInput.value = api.rolId;
         });
 }
 
 function actualizarUsuario() {
     const datosUsuario = {
-        name: nombreInput.value,
-        lastName: apellidoInput.value,
-        email: correoInput.value,
-        phone: telefonoInput.value,
-        documentType: optionDocument.value,
-        documentId: idDocumentoInput.value,
-        state: departamentoInput.value,
-        city: ciudadInput.value,
-        address: direccionInput.value,
-        password: claveInput.value,
-        rolUser: rolIdInput.value
+        nombre: nombreInput.value,
+        apellido: apellidoInput.value,
+        correo: correoInput.value,
+        telefono: telefonoInput.value,
+        tipoDocumento: optionDocument.value,
+        numeroIdentidad: idDocumentoInput.value,
+        departamento: departamentoInput.value,
+        ciudad: ciudadInput.value,
+        direccion: direccionInput.value,
+        clave: claveInput.value,
+        rolId: rolIdInput.value
     };
     // PUT Actualizar usuario
     fetch(`http://localhost:8080/api/actualizar/${loginId}`, {
