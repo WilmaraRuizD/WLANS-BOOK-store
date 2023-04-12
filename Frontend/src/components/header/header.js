@@ -15,27 +15,30 @@
   });
   // Fin del menu responsive
 
-  //function findUser(loginId) {
-let nombreDelUsuario;
-    const api_get = 'http://localhost:3020/api/BuscarUsuario/5';   ///URL de la api
-    fetch(api_get)
-        .then(res => res.json())
-        .then(respuesta => {
-            const api = respuesta;
+  //   function findUser(loginId) {
+  // let nombreDelUsuario;
+  //     const api_get = 'http://localhost:3020/api/BuscarUsuario/5';   ///URL de la api
+  //     fetch(api_get)
+  //         .then(res => res.json())
+  //         .then(respuesta => {
+  //             const api = respuesta;
 
-            nombreDelUsuario = api.nombre;
-            nombreDelUsuario = localStorage.setItem(nombreDelUsuario, nombreDelUsuario);
-            console.log(api.nombre);
-            console.log(api);
-            console.log(nombreDelUsuario);
-           
+  //             nombreDelUsuario = api.nombre;
+  //             nombreDelUsuario = localStorage.setItem(nombreDelUsuario, nombreDelUsuario);
+  //             console.log(api.nombre);
+  //             console.log(api);
+  //             console.log(nombreDelUsuario);
 
-        });
-        console.log(nombreDelUsuario);
-        
-//}
-let loginIdUser = localStorage.getItem("usearID");
-console.log(loginIdUser);
+
+  //         });
+  //         console.log(nombreDelUsuario);
+
+  // }
+
+  //Localstorage nombre
+  localStorage.setItem('nombreUsuario', "Wilmara") //Ejemplo de localstorage
+
+  nombreDelUsuario = localStorage.getItem('nombreUsuario');
 
 
   // Usuario LOGIN
