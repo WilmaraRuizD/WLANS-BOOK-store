@@ -16,12 +16,16 @@
     font-size: 100%;
     box-sizing: border-box;
     font-family: var(--textfont);
+  
+   
+     
 }
 
 body {
     width: 100vw;
     min-width: 360px;
     background: radial-gradient(circle, rgba(27, 36, 55, 1) 0%, rgba(13, 13, 17, 1) 91%);
+   
 }
 
 /* header */
@@ -32,6 +36,7 @@ header {
     width: 100vw;
     padding: 3em 2em;
     min-width: 360px;
+    
 }
 
 .logo {
@@ -160,6 +165,7 @@ header {
 
 /* Fin del header */
 
+
 .container-banner {
   display: flex;
   justify-content: start;
@@ -171,6 +177,7 @@ header {
   background-attachment: fixed;
   height: 400px;
   width: 100vw;
+  overflow-x: hidden;
 }
 
 
@@ -185,6 +192,7 @@ header {
   background-attachment: fixed;
   height: 350px;
   width: 100vw;
+
 }
 
 .content {

@@ -5,32 +5,28 @@ const menuClose = doc.querySelector(".close");
 const overlay = doc.querySelector(".overlay");
 
 menuOpen.addEventListener("click", () => {
-    overlay.classList.add("overlay--active");
+  overlay.classList.add("overlay--active");
 });
 
 menuClose.addEventListener("click", () => {
-    overlay.classList.remove("overlay--active");
+  overlay.classList.remove("overlay--active");
 });
 
+fetch("http://localhost:3020/api/libros")
+  .then((response) => response.json())
+  .then((data) => card(data));
 
-fetch('http://localhost:3020/api/libros')
-
-    .then(response => response.json())
-    .then(data => card(data))
-  
 function card(data) {
-    console.log(data)
-    const div = document.getElementById('cards')
+  console.log(data);
+  const div = document.getElementById("cards");
 
-    for (var i = 1; i < 25; i++) {
-        if (i % 2 == 0) {
+  for (var i = 1; i < 25; i++) {
+    if (i % 2 == 0) {
+      console.log(data);
 
-            console.log(data);
-         
-            let id = data[i].id;
+      let id = data[i].id;
 
-           
-            div.innerHTML += `
+      div.innerHTML += `
         
             <article class="product_item" id="${data[i].categoria_id}">
                 <div class="detalles" id="detalles">
@@ -59,25 +55,21 @@ function card(data) {
                 </div>
                 
         </article>   
-            `
-        }
-
+            `;
     }
-
+  }
 }
 
 function escucharbtn(id) {
-    console.log(id);
-    const tarjetas = document.getElementById('modal_container');
+  console.log(id);
+  const tarjetas = document.getElementById("modal_container");
 
-    fetch('http://localhost:3020/api/libros/' + id)
-        .then(response => response.json())
-        .then(data => {
-           
-    Object.keys(data).forEach((libros) => {
-
-                console.log(id);
-                tarjetas.innerHTML += `    
+  fetch("http://localhost:3020/api/libros/" + id)
+    .then((response) => response.json())
+    .then((data) => {
+      Object.keys(data).forEach((libros) => {
+        console.log(id);
+        tarjetas.innerHTML += `    
                 <div class="modal_container">
                     <div class="modal__conten">
                         <h3 class="title_modal"> ${data.nombre}</h3><br>
@@ -89,60 +81,76 @@ function escucharbtn(id) {
                         <p class="modal_det">Año de publicación: ${data.ano_de_publicacion}</p>
                         
                         
-                        <button class="modal__closed" id="closed">
+                        <button class="modal__closed" id="closed" onclick="closeModal()">
+                        
                             X
                         </button>
                     </diV>
                 </div> 
-                        `
+                        `;
+      });
+    });
+}
 
-                let closed = document.getElementById('closed');
-
-                closed.addEventListener('click', function () {
-                    alert("esto es prueba")
-                    location.reload();
-
-                });
-            })
-})
+function closeModal() {
+  var modal = document.querySelector(".modal_container"); // selecciona el elemento modal
+  modal.style.display = "none";
+  location.reload();
 }
 
 /*Función agregar al carrito */
 
 function agregarCarrito(id) {
-    console.log(id);
-    fetch('http://localhost:3020/api/libros/' + id)
-        .then(response => response.json())
-        .then(data => {
-            Object.keys(data).forEach((libros) => {
-                console.log(data)
-                console.log(data.nombre)
-                let nombre = data.nombre;
-                let foto = data.foto;
-                libros;
+  console.log(id);
+  fetch("http://localhost:3020/api/libros/" + id)
+    .then((response) => response.json())
+    .then((data) => {
+      Object.keys(data).forEach((libros) => {
+        console.log(data);
+        console.log(data.nombre);
+        let nombre = data.nombre;
+        let foto = data.foto;
+        libros;
+
+        let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+        const producto = { nombre, foto };
+        carrito.push(producto);
+        localStorage.setItem("carrito", JSON.stringify(carrito))
+
+        //Funcion contador carrito
+      
+        function mostrar() {
+            swal({
+                icon: "success", 
+                text: "Producto agregado",
                
+              });
+        };
+        
 
-                let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-                const producto = { nombre, foto };
-                carrito.push(producto);
-                localStorage.setItem("carrito", JSON.stringify(carrito))
-            
-                //Función mostrar check
-                
-                alert("Producto agregado correctamente")
-                if(confirm){
-                    actualizar()
-                    mostrar();
-                   /* document.addEventListener("DOMContentLoaded",function mostrar() {
-                    
-                        const click = document.querySelector('btn-carrito');
-                        click.style.display = 'block';
-                    })*/
-                }
+        mostrar();
 
-            }
+        
+        
 
-            )
-        })
-}
 
+          const carritoLength = carrito.length;
+          localStorage.setItem("carritoLength", JSON.stringify(carritoLength) || 0) ;
+          
+          const globo = document.querySelector("#globo");
+          globo.style.display = "inline-block";
+          globo.innerHTML = carritoLength;
+          reload();
+          
+        
+    
+          });
+      });
+    };
+
+
+
+
+
+
+  

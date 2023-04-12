@@ -284,7 +284,7 @@ function actualizar(){
 }
 
 
-/*BOTON PAGAR*/
+//BOTON PAGAR
 
 function pagarClicked() {
     const alert = document.getElementById('alert');
@@ -295,14 +295,16 @@ function pagarClicked() {
         </div>
     </div>
     `
+    const borrarCarrito = document.querySelector('.section-carrito');
+    borrarCarrito.addEventListener('click', function () {
+        borrarCarrito.style.visibility = 'hidden';
+    })
     let closed = document.getElementById('closed');
 
     closed.addEventListener('click', function () {
-        location.reload();
+        window.location.href = "../../../index.html";
     });
 
     actualizarTotalCarrito();
 }
 document.getElementsByClassName('btn-pagar')[0].addEventListener('click', pagarClicked);
-
-
