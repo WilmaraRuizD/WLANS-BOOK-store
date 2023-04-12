@@ -285,9 +285,10 @@ header {
 
 .info__container>p {
     width: 85%;
-    margin: .5em 0;
+    margin: .10em 0;
     font-family: 'Merriweather', sans-serif;
-    font-size: 18px;
+    font-style: italic;
+    font-size: 25px;
     color: var(--whiteColor);
     text-align: center;
 }
