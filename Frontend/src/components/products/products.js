@@ -13,7 +13,7 @@ menuClose.addEventListener("click", () => {
 });
 
 
-fetch('http://127.0.0.1:3020/api/libros')
+fetch('http://localhost:3020/api/libros')
 
     .then(response => response.json())
     .then(data => card(data))
@@ -70,7 +70,7 @@ function escucharbtn(id) {
     console.log(id);
     const tarjetas = document.getElementById('modal_container');
 
-    fetch('http://127.0.0.1:3020/api/libros/' + id)
+    fetch('http://localhost:3020/api/libros/' + id)
         .then(response => response.json())
         .then(data => {
            
@@ -117,8 +117,10 @@ function agregarCarrito(id) {
             Object.keys(data).forEach((libros) => {
                 console.log(data)
                 console.log(data.nombre)
-                let nombre=data.nombre;
-                let foto=data.foto;
+                let nombre = data.nombre;
+                let foto = data.foto;
+                libros;
+               
 
                 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
                 const producto = { nombre, foto };
