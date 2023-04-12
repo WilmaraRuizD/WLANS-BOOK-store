@@ -22,6 +22,8 @@ body {
     width: 100vw;
     min-width: 360px;
     background: radial-gradient(circle, rgba(27, 36, 55, 1) 0%, rgba(13, 13, 17, 1) 91%);
+    overflow-x: hidden !important;
+    padding: 0 !important;
 }
 
 /* header */
@@ -162,67 +164,68 @@ header {
 /*banner*/
 
 .banner {
-    display: inline-block;
+    display:flex;
     position: relative;
-    width: 100%;
-}
-
-.banner_img {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 700px;
-    z-index: -1;
+    width: 100vw;
+    height: 80vh;
+    background-image: linear-gradient(rgba(27, 36, 55, 0.658), rgba(0, 0, 0, 0.096)),url(../../assets/img/bannerproduct.jpg);
+    background-size: cover;
     -webkit-mask-image: radial-gradient(ellipse at center, #1b2437 30%, transparent 100%);
     mask-image: radial-gradient(ellipse at center, #1b2437 30%, transparent 100%);
+    
 }
 
+
 .title {
-    position: absolute;
-    height: 200px;
-    margin: -300px 400px 0 40px;
+    
+    flex: 1;
+    margin: 10px;
+    font-family: 'Oswald', sans-serif;
     text-shadow: 2px 0px 8px rgba(0, 0, 0, 0.84);
     font-size: 50px;
     color: #fafbfd;
-    font-family: 'Oswald', sans-serif;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+
 }
 
 /*Categories*/
 
 .categories {
     border: none;
-    background: none;
-    border-radius: 10px;
     box-shadow: 5px 9px 18px 5px rgba(27, 36, 55, 0.71);
-    width: 93%;
+    width: 100vw;
     padding: 40px;
     list-style: none;
     overflow: hidden;
+
+    
 }
 
-.categories {
-    display: grid;
-    grid-template-columns: 1fr;
+.category_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+    
 }
+
+
 
 .categories h3 {
     font-family: 'Oswald', sans-serif;
     color: #fafbfd;
     font-size: 25px;
+    text-align: center;
+    padding-bottom: 20px;
 }
 
-.categories li {
-    display: grid;
-    font-family: 'Merriweather', serif;
-    color: #fafbfd;
-    font-size: 16px;
-    width: 20%;
-    vertical-align: top;
-    box-sizing: border-box;
-    margin: 10px;
-    padding: 10px;
 
-}
+
 
 .categories li a {
     color: #fafbfd;
@@ -234,11 +237,14 @@ header {
     background-color: none;
     box-sizing: border-box;
     border-radius: 10px;
+    
 
 }
 
-.categories li a:hover {
+.categories li:hover {
     background: #A1594C;
+    border-radius: 12px;
+    
 }
 
 
@@ -246,14 +252,14 @@ header {
 
 
 .product_item {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: row;
     height: 100%;
-    width: 80%;
+    width: 50%;
+    flex-wrap: wrap;
     justify-content: center;
     text-align: center;
     margin: 10px;
-
     box-shadow: 16px 18px 29px 10px rgba(13, 13, 17, 0.637);
     padding: 10px;
     color: #fafbfd;
@@ -284,6 +290,7 @@ header {
     font-size: 16px;
     font-family: 'Merriweather', sans-serif;
     color: #fafbfd;
+   
 }
 
 .product_pag {
@@ -293,11 +300,13 @@ header {
 }
 
 .cards {
-    width: 96%;
-    height: 500px;
+    width: 100%;
+    height: auto;
     box-sizing: border-box;
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
 }
 
 .detalles {
@@ -480,12 +489,23 @@ header {
     top: 160px;
 }
 
+@media (min-width: 400px) {
+    .title {
+        position: relative;
+        font-size: 90px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+  
+   
 
 
 
-
-
-@media (min-width: 760px) {
+@media (min-width: 1300px) {
     body {
         padding: 0 1rem;
     }
@@ -495,10 +515,12 @@ header {
     }
 
     .title {
-        position: absolute;
-        height: 200px;
-        margin: -400px 30px 0 440px;
+        position: relative;
         font-size: 90px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
     }
 
     .categories {
@@ -506,8 +528,9 @@ header {
         text-align: center;
     }
 
-    .categories li {
-        display: inline-block;
+    .categories-list {
+        display: flex;
+        flex-wrap: wrap;
         text-align: center;
     }
 
@@ -524,35 +547,34 @@ header {
     */
     .cards {
 
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-        /*justify-items: center;*/
-        place-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+       
+        
 
     }
 
-    /*.product_category {
-        text-align: center;
-        justify-content: center;
     
-    }*/
+
+
 
     .product_item {
 
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+       display: flex;
+      
     }
 
     .product_item {
-
-        height: 500px;
-        width: 350px;
+        display: flex;
         justify-content: center;
         text-align: center;
+        width: 30%;
+        height: auto;
         margin: 10px;
         /* box-shadow: 3px 1px 15px 15px rgba(27,36,55,0.74);*/
-        padding: 30px;
+        padding: 10px;
         color: #fafbfd;
         border: none;
         border-radius: 10px;
@@ -563,7 +585,7 @@ header {
     .detalles {
 
         height: 50%;
-        width: 500px;
+        width: 50%;
 
     }
 
@@ -625,7 +647,7 @@ header {
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
 
 .footer-styles {
-    margin-top: 1890px;
+    margin-top:100px;
     background-color: #0d0d11;
     overflow: hidden;
     bottom: 0;
@@ -702,5 +724,73 @@ header {
 }
 
 
-/*BOTON CHECK*/
+/*BOTON CHECK CARRITO*/
 
+#globo {
+    background: rgba(255, 0, 0, 0.381);
+    display: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding-top: 5px;
+    flex-direction: row;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 1px;
+}
+
+/* VENTANA AGREGAR A CARRITO*/
+
+
+.swal-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.swal-modal {
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-image: url(../../assets/img/BannerCastilloLibros-removebg-preview.png);
+    width: 350px;
+    max-width: 500px;
+    height: 250px;
+    position: relative !important;
+    padding: 0;
+    margin: 0;
+  }
+
+  .swal-text {
+    font-family: 'Merriweather', serif;
+    color: #0d0d11;
+    font-size: 15px;
+    font-weight: bold;
+
+
+  }
+
+  .swal-button {
+    width: 80px;
+    border-radius: 2px;
+    background-color: #1B2437;
+    font-size: 12px;
+    border:none;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+    
+  }
+
+  .swal-button:hover{
+    background-color: #A1594C !important;
+
+  }
+ .swal-footer {
+    display: flex;
+    justify-content: center;
+ }
+
+ @media (max-width:400px ) {
+    .swal-modal {
+        width: 200px;
+    }
+    
+ }
+ 
