@@ -15,21 +15,28 @@
   });
   // Fin del menu responsive
 
-  function findUser(loginId) {
-
-    const api_get = `localhost:3020/usuario/${loginId}`;   ///URL de la api
+  //function findUser(loginId) {
+let nombreDelUsuario;
+    const api_get = 'http://localhost:3020/api/BuscarUsuario/5';   ///URL de la api
     fetch(api_get)
         .then(res => res.json())
         .then(respuesta => {
             const api = respuesta;
 
-            let nombreDelUsuario = api.nombre;
+            nombreDelUsuario = api.nombre;
             nombreDelUsuario = localStorage.setItem(nombreDelUsuario, nombreDelUsuario);
+            console.log(api.nombre);
+            console.log(api);
+            console.log(nombreDelUsuario);
+           
+
         });
+        console.log(nombreDelUsuario);
         
-}
-let loginIdUser = localStorage.getItem(idUsuario);
-findUser(loginIdUser);
+//}
+let loginIdUser = localStorage.getItem("usearID");
+console.log(loginIdUser);
+
 
   // Usuario LOGIN
   const ulMenu = document.getElementById('ulmenu');
@@ -52,7 +59,7 @@ findUser(loginIdUser);
   ulSubMenu.className = "submenu"
 
   aSubMenu.textContent = "Configuración"
-  aSubMenu.href = "#"       // URL de la configuracion
+  aSubMenu.href = "../usuario/usuario.html"       // URL de la configuracion
   liUser.appendChild(ulSubMenu);
   ulSubMenu.appendChild(liSubMenu);
   liSubMenu.appendChild(aSubMenu);
@@ -74,7 +81,7 @@ findUser(loginIdUser);
   const aSubMenuOverlay2 = doc.createElement("a");
 
   aSubMenuOverlay.textContent = "Usuario";
-  aSubMenuOverlay.href = "#"; // URL de la configuracion
+  aSubMenuOverlay.href = "../usuario/usuario.html"; // URL de la configuracion
   aSubMenuOverlay2.textContent = "Configuración";
 
   liSubMenuOverlay.className = "listA"
@@ -98,6 +105,10 @@ findUser(loginIdUser);
   // Agrega un evento click al segundo enlace para cerrar sesión
   aSubMenuOverlay2.addEventListener("click", () => {
     // Agrega aquí la lógica para cerrar sesión
+    localStorage.removeItem(userID);
+    window.location.href = '../../../index.html';
+
+
   });
 
 

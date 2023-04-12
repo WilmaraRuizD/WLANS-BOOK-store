@@ -29,9 +29,14 @@ form.addEventListener('submit', (event) => {
             console.log("la clave coincide");
             if (data.rolId === 2) {
               console.log("Ingreso usuario");
+              console.log(data.id);
+              let id = data.id;
+              let nombre = data.nombre;
+              localStorage.setItem("userNombre", nombre);
+              localStorage.setItem("usearID", id);
               swal('Felicidades', '¡Ingreso Exitoso!', 'success').then(
                 value => {
-                  window.location.href = './../../../index.html';
+                  window.location.href = '../../components/header/header.html';
                 });
             }
             else {
