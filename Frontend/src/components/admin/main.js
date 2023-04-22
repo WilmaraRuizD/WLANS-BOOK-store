@@ -1,7 +1,12 @@
 /* variable global  */
-
+/*
 let url='http://127.0.0.1:3020/api/libros';//ver libros 
 let url1='http://127.0.0.1:3020/api/libros/';//filtrar por categorias 
+*/
+
+let url='https://apibackendprueba-production.up.railway.app/api/libros';//ver libros 
+let url1='https://apibackendprueba-production.up.railway.app/api/libros/';//filtrar por categorias
+
 
 let verLibros=document.getElementById("ver_libros");
 let por_categoria=document.getElementById("por_categoria");

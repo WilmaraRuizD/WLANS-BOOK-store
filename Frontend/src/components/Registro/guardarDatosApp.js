@@ -1,4 +1,6 @@
-let url = 'http://127.0.0.1:3020/api/CrearUsuario';
+let url = 'https://apibackendprueba-production.up.railway.app/api/CrearUsuario';
+/*
+let url = 'http://127.0.0.1:3020/api/CrearUsuario';*/
 
 let form = document.querySelector('form');
 

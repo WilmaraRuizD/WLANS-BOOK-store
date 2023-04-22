@@ -1,6 +1,6 @@
 function mostrarCategorias(){
-url1='http://127.0.0.1:3020/api/categorias'; //ver categoria 
- 
+//url1='http://127.0.0.1:3020/api/categorias'; //ver categoria 
+url1='https://apibackendprueba-production.up.railway.app/api/categorias'; //ver categoria 
 
   fetch(url1)
   .then(response=>response.json())
@@ -36,7 +36,7 @@ url1='http://127.0.0.1:3020/api/categorias'; //ver categoria
 }
 
     function clasificarPorCategoria(id){
-      url1='http://127.0.0.1:3020/api/filtrarCategoria/'+id;
+      url1='https://apibackendprueba-production.up.railway.app/api/filtrarCategoria/'+id;
     
       fetch(url1)
       .then(response=>response.json())
