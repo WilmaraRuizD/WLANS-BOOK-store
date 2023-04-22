@@ -328,14 +328,14 @@ ul li {
   width: 400px;
   max-width: 500px;
   height: 300px;
-  padding: 5px 50px 50px 50px;
+  padding: 2px 50px 50px 20px;
   position: relative;
   border-radius: 5px;
   color: #0d0d11;
   font-family: 'Merriweather', serif;
   letter-spacing: 1px;
   box-sizing: border-box;
-  background-image: url(/src/assets/img/logo.png);
+  background-image: url(../../assets/img/logo.png);
   background-color: #50555d;
   display: block;
 
@@ -343,14 +343,16 @@ ul li {
 
 .modal__conten h3 {
   text-align: left;
-  padding-top: 0;
+  padding-top: 40px;
+  font-size: 18px;
+  padding-left: 1px;
 
 }
 
 .modal__closed {
   position: absolute;
-  top: 5px;
-  right: 3px;
+  top: 25px;
+  right: 25px;
   background: none;
   border: none;
   outline: none;

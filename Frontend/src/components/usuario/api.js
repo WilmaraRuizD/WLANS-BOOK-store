@@ -13,10 +13,10 @@ menuClose.addEventListener("click", () => {
 });
 
 // Llamada del id del usuario
-const loginId = localStorage.getItem('UseraID')
+const loginId = localStorage.getItem('usearID')
 
 // Llamada de la API
-const url = `http://localhost:8080/api/${localStorage.getItem('UseraID')}`;
+const url = `http://localhost:3020/api/`;
 
 // Llamada de los Inputs
 const nombreInput = document.getElementById('Nombre');
@@ -42,7 +42,7 @@ findUser();
 // LLenado de Inputs
 function findUser() {
 
-    const api_get = `${url}BuscarUsuario/${localStorage.getItem('UseraID')}`;
+    const api_get = `${url}BuscarUsuario/${localStorage.getItem('usearID')}`;
     fetch(api_get)
         .then(res => res.json())
         .then(respuesta => {
@@ -65,6 +65,7 @@ function findUser() {
 
 function actualizarUsuario() {
     const datosUsuario = {
+        id: userIdInput.value,
         nombre: nombreInput.value,
         apellido: apellidoInput.value,
         correo: correoInput.value,
@@ -78,7 +79,7 @@ function actualizarUsuario() {
         rolId: rolIdInput.value
     };
     // PUT Actualizar usuario
-    fetch(`http://localhost:8080/api/actualizar/${localStorage.getItem('UseraID')}`, {
+    fetch(`http://localhost:3020/api/ModificarUsuario`, {
         method: "PUT",
         body: JSON.stringify({
             id: loginId,
