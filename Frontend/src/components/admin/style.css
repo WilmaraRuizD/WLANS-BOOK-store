@@ -45,6 +45,16 @@ header img{
 
 }
 
+.ms-1, .d-none {
+color: #DAC2BB!important;
+}
+
+.ms-1:hover, .d-none:hover {
+  color: #A1594C!important;
+  }
+
+
+
 
 .div1{
   margin-right: 50px;
@@ -368,4 +378,6 @@ form button{
  .modal_img img{
   height: 160px;
  }
+
+
 }
