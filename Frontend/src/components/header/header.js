@@ -1,18 +1,6 @@
 (() => {
 
-  // Menu responsive
-  const doc = document;
-  const menuOpen = doc.querySelector(".menu");
-  const menuClose = doc.querySelector(".close");
-  const overlay = doc.querySelector(".overlay");
-
-  menuOpen.addEventListener("click", () => {
-    overlay.classList.add("overlay--active");
-  });
-
-  menuClose.addEventListener("click", () => {
-    overlay.classList.remove("overlay--active");
-  });
+  
   // Fin del menu responsive
 
   //   function findUser(loginId) {
@@ -36,9 +24,10 @@
   // }
 
   //Localstorage nombre
-  localStorage.setItem('nombreUsuario', "Wilmara") //Ejemplo de localstorage
+ 
 
-  nombreDelUsuario = localStorage.getItem('nombreUsuario');
+  nombreDelUsuario = localStorage.getItem('userNombre');
+
 
 
   // Usuario LOGIN
@@ -47,7 +36,10 @@
   const aUser = document.createElement('a');
 
   aUser.className = 'logo'
-  aUser.textContent = nombreDelUsuario;      //Nombre de usuario
+  aUser.textContent = nombreDelUsuario; 
+  if (aUser.textContent != "") {
+    
+      //Nombre de usuario
 
   ulMenu.appendChild(liUser);
   liUser.appendChild(aUser);
@@ -62,7 +54,7 @@
   ulSubMenu.className = "submenu"
 
   aSubMenu.textContent = "Configuración"
-  aSubMenu.href = "../usuario/usuario.html"       // URL de la configuracion
+  aSubMenu.href = "/Frontend/src/components/usuario/usuario.html"       // URL de la configuracion
   liUser.appendChild(ulSubMenu);
   ulSubMenu.appendChild(liSubMenu);
   liSubMenu.appendChild(aSubMenu);
@@ -108,8 +100,9 @@
   // Agrega un evento click al segundo enlace para cerrar sesión
   aSubMenuOverlay2.addEventListener("click", () => {
     // Agrega aquí la lógica para cerrar sesión
-    localStorage.removeItem(userID);
-    window.location.href = '../../../index.html';
+    localStorage.removeItem("usearID");
+    localStorage.removeItem("userNombre");
+    window.location.href = '/Frontend/index.html';
 
 
   });
@@ -126,5 +119,5 @@
 
 
 
-
+} 
 })();

@@ -13,7 +13,7 @@ menuClose.addEventListener("click", () => {
 });
 
 // Llamada del id del usuario
-const loginId = localStorage.getItem('UseraID')
+const loginId = localStorage.getItem('usearID')
 
 // Llamada de la API
 const url = `https://apibackendprueba-production.up.railway.app/api/`;

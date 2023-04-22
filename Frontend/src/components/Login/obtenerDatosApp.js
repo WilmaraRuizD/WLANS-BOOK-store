@@ -43,7 +43,7 @@ form.addEventListener('submit', (event) => {
               localStorage.setItem("usearID", id);
               swal('Felicidades', '¡Ingreso Exitoso!', 'success').then(
                 value => {
-                  window.location.href = '../../components/header/header.html';
+                  window.location.href = '../../../index.html';
                 });
             }
             else {
