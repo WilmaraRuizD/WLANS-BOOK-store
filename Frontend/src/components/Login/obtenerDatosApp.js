@@ -1,5 +1,12 @@
+/*
+despliegue local  
 url = 'http://127.0.0.1:3020/api/filtrarCorreo/';
 url1 = 'http://127.0.0.1:3020/api/filtrartelefono/';
+*/
+
+url = 'https://apibackendprueba-production.up.railway.app/api/filtrarCorreo/';
+url1 = 'https://apibackendprueba-production.up.railway.app/api/filtrartelefono/';
+
 
 let form = document.querySelector('form');
 let contactoInput = document.querySelector('#contacto');

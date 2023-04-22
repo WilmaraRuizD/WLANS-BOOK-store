@@ -16,7 +16,8 @@ menuClose.addEventListener("click", () => {
 const loginId = localStorage.getItem('usearID')
 
 // Llamada de la API
-const url = `http://localhost:3020/api/`;
+const url = `https://apibackendprueba-production.up.railway.app/api/`;
+//const url = `http://localhost:8080/api/${localStorage.getItem('UseraID')}`;
 
 // Llamada de los Inputs
 const nombreInput = document.getElementById('Nombre');
@@ -41,8 +42,8 @@ findUser();
 
 // LLenado de Inputs
 function findUser() {
-
     const api_get = `${url}BuscarUsuario/${localStorage.getItem('usearID')}`;
+
     fetch(api_get)
         .then(res => res.json())
         .then(respuesta => {
@@ -79,7 +80,8 @@ function actualizarUsuario() {
         rolId: rolIdInput.value
     };
     // PUT Actualizar usuario
-    fetch(`http://localhost:3020/api/ModificarUsuario`, {
+        fetch(`https://apibackendprueba-production.up.railway.app/api/ModificarUsuario`, {
+
         method: "PUT",
         body: JSON.stringify({
             id: loginId,

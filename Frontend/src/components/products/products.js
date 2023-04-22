@@ -12,7 +12,8 @@ menuClose.addEventListener("click", () => {
   overlay.classList.remove("overlay--active");
 });
 
-fetch("http://localhost:3020/api/libros")
+fetch("https://apibackendprueba-production.up.railway.app/api/libros"
+  /*"http://localhost:3020/api/libros"*/)
   .then((response) => response.json())
   .then((data) => card(data));
 
@@ -64,7 +65,8 @@ function escucharbtn(id) {
   console.log(id);
   const tarjetas = document.getElementById("modal_container");
 
-  fetch("http://localhost:3020/api/libros/" + id)
+  fetch("https://apibackendprueba-production.up.railway.app/api/libros/" + id
+    /*"http://localhost:3020/api/libros/" + id*/)
     .then((response) => response.json())
     .then((data) => {
       Object.keys(data).forEach((libros) => {
@@ -102,7 +104,9 @@ function closeModal() {
 
 function agregarCarrito(id) {
   console.log(id);
-  fetch("http://localhost:3020/api/libros/" + id)
+  fetch("https://apibackendprueba-production.up.railway.app/api/libros/" + id
+    
+   /* "http://localhost:3020/api/libros/" + id*/)
     .then((response) => response.json())
     .then((data) => {
       Object.keys(data).forEach((libros) => {
