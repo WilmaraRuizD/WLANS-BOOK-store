@@ -1,0 +1,234 @@
+/* Estilos generales  */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+
+:root {
+  --onecolor: #A1594C;
+  --twocolor: #BAC4D0;
+  --threecolor: #50555D;
+  --fourcolor :#1B2437;
+  --fivecolor:#0d0d11;
+  --sixcolor:#DAC2BB;
+  --sevencolor:#FAFBFD;
+
+  --textfont: 'Merriweather', sans-serif;
+  --tittlefont: 'Oswald', sans-serif;
+
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--textfont);
+}
+body{
+  width: 100vw;
+  min-width: 360px;
+  background: rgb(27, 36, 55);
+  background: radial-gradient(circle, rgba(27,36,55,1) 0%, rgba(13,13,17,1) 91%);
+  overflow-x: hidden;
+  z-index: 1;
+
+}
+/* header  */
+header{
+  margin-bottom: 20px;
+  display: flex;
+}
+
+header img{
+  width: 224px;
+  height: 150px;
+
+}
+
+
+.div1{
+  margin-right: 50px;
+}
+.div2{
+  justify-content: center;
+align-items:  center;
+padding-left: 50px;
+margin-right: 50px;
+padding-top:50px ;
+width: 600px;
+}
+.div2 input{
+  width: 400px;
+  background-color: #0d0d11;
+  border-radius: 10px ;
+  color: #FAFBFD;
+  border: 2px solid var(--sevencolor);
+}
+
+.div2 button{
+  background-color:var(--fivecolor);
+  border-radius: 10px;
+  color: var(--sevencolor);
+  border: 2px solid var(--sevencolor);
+  width: 80px;
+}
+.div2 button:hover{
+  background-color:var(--onecolor);
+  border-radius: 10px;
+  color: var(--fivecolor);
+  border: 2px solid var(--fivecolor);
+  width: 80px;
+}
+
+.div3{
+  justify-content: center;
+  width: 200px;
+  align-items:  end;
+  padding-top:50px ;
+  padding-left: 50px;
+ margin-left: 50px;
+}
+
+.div1 a, .div3 a,a {
+  color: var(--twocolor);
+  text-decoration: none;
+}
+
+h5{
+  color: var(--twocolor);
+  margin: auto;
+  width: 50%;
+  font-family: var(--tittlefont);
+ padding: 20px;
+ font-size: 250% ;
+}
+
+/* card de categoria  */
+.card{
+
+  color: var(--sevencolor);
+  margin: auto;
+  width: 80vw;
+  background-color: var(--fivecolor);
+  border-radius: 10px;
+  border:solid 1px var(--fourcolor);
+  margin-top: 20px;
+  padding: 10px;
+  box-shadow: 5px 5px 8px var(--sixcolor);
+
+  }
+
+  .card_text{
+    margin-top: 10px;
+  }
+  
+  h3{
+    color: var(--sixcolor);
+    display: flex;
+    justify-content: center;
+  }
+
+  .card_text li{
+    list-style:none; 
+    display: flex;
+    justify-content: center; 
+  }
+  
+
+  .card_botones{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .card_botones button{
+    margin: 10px;
+  }
+
+  .botton_crear{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    text-align: center;
+    background-color: var(--fourcolor);
+    border-radius: 10px;
+  }
+  
+  
+  .modal_container {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 20px;
+  
+}
+
+.modal__conten {
+  width: 75%;
+  padding: 20px;
+  position: relative;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color:#fafbfd;
+  background: radial-gradient(ellipse at center, #1B2437 0%, #092437 88%, #1B2437 100%);
+  display: block;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 1px 3px 16px 7px #a1594c4c;
+}
+form div {
+  display: flex;
+ 
+}
+
+label {
+  color:var(--sevencolor);
+  font-size: 15px;
+  font-family: 'Merriweather', sans-serif;
+  width: 200px;
+  text-align: start;
+padding-left: 10px;
+}
+
+input,
+select {
+ 
+  width: 300px;
+  padding: 5px 5px;
+  margin: 0;
+  display: inline-block;
+  border: 1px solid #50555d;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.btn_button{
+ display: flex;
+ justify-content: center;
+}
+
+.btn_button button{
+margin: 10px;
+}
+
+modal__closed{
+  background-color: rebeccapurple;
+  color: red;
+}
+
+/*
+.modal__closed{
+  background-color: rebeccapurple;
+  position: absolute;
+  top: 5px;
+  right: 3px;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: red;
+}
+*/

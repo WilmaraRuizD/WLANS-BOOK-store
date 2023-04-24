@@ -95,6 +95,10 @@ function pintarId(id, e) {
 function crearLibro() {
   window.open("./static/crearLibro.html");
 }
+/* abre en ventana emergente el archivo usuario.html */
+function crudUsuario(){
+  window.open("./static/usuario.html");
+}
 
 
 /* POST CREAR LIBRO  */
@@ -126,5 +130,13 @@ capturaLibros.addEventListener("submit", function (e) {
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
+      function mostrar() {
+        swal({
+            icon: "success", 
+            text: "Eliminado exitosamente",
+           
+          });
+          mostrar();
+
     });
 })

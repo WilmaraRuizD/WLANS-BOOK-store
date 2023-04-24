@@ -1,6 +1,8 @@
 function mostrarCategorias(){
 //url1='http://127.0.0.1:3020/api/categorias'; //ver categoria 
 url1='https://apibackendprueba-production.up.railway.app/api/categorias'; //ver categoria 
+url='https://apibackendprueba-production.up.railway.app/api/libros/'; //ver categoria 
+
 
   fetch(url1)
   .then(response=>response.json())
@@ -26,6 +28,7 @@ url1='https://apibackendprueba-production.up.railway.app/api/categorias'; //ver 
    
     let boton= document.getElementById("boton");
 
+  
     boton.addEventListener("click",(e)=>{
     let id=( document.getElementById("categoria").value);
       console.log(id);
@@ -82,16 +85,24 @@ url1='https://apibackendprueba-production.up.railway.app/api/categorias'; //ver 
       console.log(id);
       console.log(url+id);
       
-      fetch(url2 +id, {
+      fetch(url +id, {
         method: "DELETE",
       })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        
+    function mostrar() {
+      swal({
+          icon: "success", 
+          text: "Eliminado exitosamente",
+         
+        });
+        mostrar();
+  };
      
     })
     .catch(error=>{console.log(error)
-      alert(error)
     });
     }
 
