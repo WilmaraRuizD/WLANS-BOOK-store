@@ -93,5 +93,16 @@ menuClose.addEventListener("click", () => {
   overlay.classList.remove("overlay--active");
 });
 
+const botonCerrar= doc.getElementsByClassName("cta")
+if(! userNombre) {
+  botonCerrar.style.visibility = "hidden";
+}
+
+function cerrar() {
+  localStorage.removeItem("usearID");
+  localStorage.removeItem("userNombre");
+  window.location.href = './index.html';
+  
+}
 
 
