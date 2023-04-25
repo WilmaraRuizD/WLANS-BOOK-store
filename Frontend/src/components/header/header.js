@@ -31,6 +31,7 @@
 
 
   // Usuario LOGIN
+  
   const ulMenu = document.getElementById('ulmenu');
   const liUser = document.createElement('li');
   const aUser = document.createElement('a');
@@ -45,7 +46,8 @@
   liUser.appendChild(aUser);
 
   //Creacion de submenu
-  const ulSubMenu = document.createElement('ul');
+
+  /*const ulSubMenu = document.createElement('ul');*/
   const liSubMenu = document.createElement('li');
   const liSubMenu2 = document.createElement('li');
   const aSubMenu = document.createElement('a');
@@ -69,17 +71,18 @@
     ulSubMenu.classList.toggle('submenuActivo');
   })
 
+
   const overlayContent = doc.querySelector(".overlay__content");
 
   const liSubMenuOverlay = doc.createElement("li");
   const aSubMenuOverlay = doc.createElement("a");
   const aSubMenuOverlay2 = doc.createElement("a");
-
+/*
   aSubMenuOverlay.textContent = "Usuario";
   aSubMenuOverlay.href = "../usuario/usuario.html"; // URL de la configuracion
   aSubMenuOverlay2.textContent = "Configuración";
-
-  liSubMenuOverlay.className = "listA"
+*/
+  /*liSubMenuOverlay.className = "listA"
 
   overlayContent.appendChild(liSubMenuOverlay);
   liSubMenuOverlay.appendChild(aSubMenuOverlay);
@@ -118,6 +121,9 @@
 
 
 
-
+*/
 } 
+
+
+
 })();
