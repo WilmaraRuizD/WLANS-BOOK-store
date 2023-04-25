@@ -137,6 +137,7 @@ capturaLibros.addEventListener("submit", function (e) {
            
           });
           mostrar();
+          }
 
     });
 })
